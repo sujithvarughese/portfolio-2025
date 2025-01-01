@@ -5,21 +5,15 @@ import { useDisclosure } from '@mantine/hooks'
 import Hero from './sections/Hero.jsx'
 
 const App = () => {
-  const [opened, { toggle }] = useDisclosure();
 
   return (
     <AppShell
       header={{ height: 60 }}
-      navbar={{
-        width: 150,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      }}
       maw="1280px"
       m="auto"
       padding="md"
     >
-      <Header opened={opened} onClick={toggle}/>
+      <Header/>
 
       <AppShell.Main>
         <Hero />

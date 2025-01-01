@@ -1,1 +1,98 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500, 600, 700, 800, 900');
+
+.social-icon {
+    display: inline-block;
+    margin-left: 14px;
+}
+.social-icon a {
+    width: 42px;
+    height: 42px;
+    background: rgba(217, 217, 217, 0.1);
+    display: inline-flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+    content: "";
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+.social-icon a:hover::before {
+    transform: scale(1);
+}
+.social-icon a img {
+    width: 50%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+.social-icon a:hover img {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+@media (min-width: 600px) {
+    .connect {
+        padding: 10px 34px;
+        font-size: 18px;
+        margin-left: 18px;
+    }
+}
+.connect {
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 12px;
+    position: relative;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+}
+
+
+.connect::before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(
+            90deg,
+            hsl(188deg 79% 5%) 0%,
+            hsl(190deg 62% 9%) 8%,
+            hsl(189deg 67% 12%) 17%,
+            hsl(188deg 72% 15%) 25%,
+            hsl(189deg 74% 18%) 33%,
+            hsl(189deg 76% 21%) 42%,
+            hsl(189deg 79% 24%) 50%,
+            hsl(189deg 79% 29%) 58%,
+            hsl(189deg 80% 33%) 67%,
+            hsl(189deg 80% 38%) 75%,
+            hsl(189deg 57% 49%) 83%,
+            hsl(189deg 64% 58%) 92%,
+            hsl(189deg 79% 66%) 100%
+    );
+    left: 0;
+    top: 0;
+    z-index: -50;
+    transition: 0.3s ease-in-out;
+}
+.connect:hover {
+    color: #121212;
+
+}
+.connect:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
