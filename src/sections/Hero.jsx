@@ -10,7 +10,7 @@ import diploma from "../assets/images/certificates/diploma.png"
 import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
 import Assistant from '../components/assistant/Assistant.jsx'
-import { Anchor, Box, Flex, Text } from '@mantine/core'
+import { Anchor, BackgroundImage, Box, Flex, Text, Title } from '@mantine/core'
 
 const Hero = forwardRef((props, ref) => {
 
@@ -57,7 +57,9 @@ const Hero = forwardRef((props, ref) => {
         position="relative"
         alignItems="center"
       >
-        <Box
+        <BackgroundImage
+          src={christmasBg}
+          style={{ backgroundSize: "cover", backgroundPosition: "right" }}
           width={{ xs: 320, md: 480 }}
           height={{ xs: 320, md: 480 }}
           bgcolor='warning.main'
@@ -68,10 +70,9 @@ const Hero = forwardRef((props, ref) => {
           bottom={{ xs: 24, sm: "revert" }}
           //borderTop="black 8px solid"
           //borderBottom="black 8px solid"
-          sx={{  backgroundImage:`url(${christmasBg})`, backgroundSize: "cover", backgroundPosition: "right"}}
         >
 
-          <Text fontSize={{ xs: 28, md: 48 }} fontWeight={700}>{currentNameText}</Text>
+          <Title style={{ fontSize: { xs: 28, md: 48 }, fontWeight: 800 }}>{currentNameText}</Title>
           <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
 
           <Flex flexDirection="row" >
@@ -104,7 +105,7 @@ const Hero = forwardRef((props, ref) => {
             </Anchor>
           </Box>
 
-        </Box>
+        </BackgroundImage>
 
         <Box display="flex" justifyContent="center">
           <Box component="img" src={profilePicture2} alt="Profile Picture"
