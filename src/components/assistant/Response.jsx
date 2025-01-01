@@ -1,4 +1,4 @@
-import { Box, Loader, Modal, Title, Text } from '@mantine/core'
+import { Box, Loader, Modal, Title, Text, Flex } from '@mantine/core'
 
 
 const Response = ({ opened, close, response, loading, error }) => {
@@ -7,22 +7,19 @@ const Response = ({ opened, close, response, loading, error }) => {
   return (
     <Modal
       opened={opened}
-      keepMounted
-      maxWidth="xl"
       onClose={close}
       aria-describedby="alert-dialog-slide-description"
     >
-      <Title>AI Assistant</Title>
-      <Box>
-        {loading ?
-          <Box sx={{ display: 'flex', justifyContent: "center" }}>
-            {loading && <Loader />}
-          </Box>
-        :
-          <Text whiteSpace="break-spaces">{response}</Text>
+      <Title style={{ textAlign: "center"}}>AI Assistant</Title>
 
-        }
-      </Box>
+      <Flex justify="center" p={12}>
+        {loading && <Loader style={{ alignSelf: "center", justifySelf: "center"}}/>}
+      </Flex>
+
+      <Text whiteSpace="break-spaces">{response}</Text>
+
+
+
     </Modal>
   )
 }

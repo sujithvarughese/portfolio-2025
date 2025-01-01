@@ -10,9 +10,9 @@ import diploma from "../assets/images/certificates/diploma.png"
 import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
 import Assistant from '../components/assistant/Assistant.jsx'
-import { Anchor, BackgroundImage, Box, Flex, Text, Title } from '@mantine/core'
+import { Anchor, BackgroundImage, Box, Container, Flex, Image, Text, Title } from '@mantine/core'
 
-const Hero = forwardRef((props, ref) => {
+const Hero = () => {
 
 
   const [currentNameText, setCurrentNameText] = useState("")
@@ -45,88 +45,75 @@ const Hero = forwardRef((props, ref) => {
 
 
   return (
-    <Box
-      as="section"
-      id="home"
-      ref={ref}
-
-      marginX={{ xs: 1, lg: 12 }}
-    >
-      <Flex
-        flexDirection="row"
-        position="relative"
-        alignItems="center"
+    <Box as="section" marginX={{ xs: 1, lg: 12 }} pos="relative" px={24}>
+      <BackgroundImage
+        src={christmasBg}
+        radius="md"
+        pos="absolute"
+        top={75}
+        left={0}
+        pl={72}
+        pt={102}
+        w={{ base: 320, md: 420 }}
+        h={{ base: 320, md: 420 }}
+        style={{ backgroundSize: "cover", backgroundPosition: "left"}}
       >
-        <BackgroundImage
-          src={christmasBg}
-          style={{ backgroundSize: "cover", backgroundPosition: "right" }}
-          width={{ xs: 320, md: 480 }}
-          height={{ xs: 320, md: 480 }}
-          bgcolor='warning.main'
-          py={{xs: 4, md: 16}}
-          px={2}
-          borderRadius={2}
-          position="absolute"
-          bottom={{ xs: 24, sm: "revert" }}
-          //borderTop="black 8px solid"
-          //borderBottom="black 8px solid"
-        >
+        <Title style={{ fontSize: 42}}>{currentNameText}</Title>
+        <Title order={2}  whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Title>
 
-          <Title style={{ fontSize: { xs: 28, md: 48 }, fontWeight: 800 }}>{currentNameText}</Title>
-          <Text variant="h5" fontWeight={600} whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Text>
-
-          <Flex flexDirection="row" >
-            <motion.div
-              initial={{ opacity: 0, y: -1000, x: -50 }}
-              animate={{
-                opacity: 1, y: 0, x: 0,
-                transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
-              }}
-            >
-              <IoLocationSharp fontSize={28}/>
-            </motion.div>
-            <Text variant="h6">{currentLocationText}</Text>
-          </Flex>
-
-          <Box
-            component={motion.div}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
-            padding={1}
+        <Flex flexDirection="row" >
+          <motion.div
+            initial={{ opacity: 0, y: -1000, x: -50 }}
+            animate={{
+              opacity: 1, y: 0, x: 0,
+              transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
+            }}
           >
-            <Anchor href={diploma}  target="_blank" rel="noreferrer" underline="none">
-              <Text color="black" sx={{ "&:hover": { color: "white" }}}>Bachelor of Computer Science, 2022</Text>
-            </Anchor>
-            <Anchor href={compTiaCert} target="_blank" rel="noreferrer" underline="none">
-              <Text color="black" sx={{ "&:hover": { color: "white" }}}>CompTIA A+ Certified</Text>
-            </Anchor>
-            <Anchor href={metaCert} target="_blank" rel="noreferrer" underline="none">
-              <Text color="black" sx={{ "&:hover": { color: "white" }}}>Meta Front End Developer Certified</Text>
-            </Anchor>
-          </Box>
+            <IoLocationSharp fontSize={28}/>
+          </motion.div>
+          <Text variant="h6">{currentLocationText}</Text>
+        </Flex>
 
-        </BackgroundImage>
+        <Flex
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
+          padding={1}
+          direction="column"
+        >
+          <Anchor href={diploma}  target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
+            Bachelor of Computer Science, 2022
+          </Anchor>
+          <Anchor href={compTiaCert} target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
+            CompTIA A+ Certified
+          </Anchor>
+          <Anchor href={metaCert} target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
+            Meta Front End Developer Certified
+          </Anchor>
+        </Flex>
+      </BackgroundImage>
 
-        <Box display="flex" justifyContent="center">
-          <Box component="img" src={profilePicture2} alt="Profile Picture"
-               width="90%"
-               display={{ xs: "none", sm: "initial" }}
-               zIndex={-10}
-               borderRadius={2}
-          />
-          <Box component="img" src={profilePictureMobile} alt="Profile Picture"
-               display={{ sm: "none" }}
-               zIndex={-10}
-               borderRadius={2}
-          />
 
-        </Box>
-      </Flex>
+
+
+
+        <Image src={profilePicture2} alt="Profile Picture"
+             display={{ xs: "none", sm: "initial" }}
+             zIndex={-10}
+             borderRadius={2}
+        />
+        <Image src={profilePictureMobile} alt="Profile Picture"
+             display={{ sm: "none" }}
+             zIndex={-10}
+             borderRadius={2}
+        />
+
+
       <Assistant />
       <Skills />
 
     </Box>
   )
-})
+}
 
 export default Hero

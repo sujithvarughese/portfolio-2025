@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Response from './Response.jsx'
 import * as React from 'react'
 import useSubmit from '../../hooks/useSubmit.js'
-import { Box, Button, Paper, Text, Textarea } from '@mantine/core'
+import { Box, Button, Container, Flex, Paper, Text, Textarea, Title } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IoIosSend } from "react-icons/io";
 
@@ -21,36 +21,31 @@ const Assistant = () => {
 
   return (
     <>
-      <Box
-        width={{ xs: "90%", sm: "80%", md: "50%"}}
+      <Container
+        w={{ base: "90%", sm: "80%"}}
         sx={{ justifyContent: "center", margin: "auto"}}>
-        <Paper elevation={6}>
-          <Box
-            sx={{ margin: 2, padding: 2, justifyContent: "center", alignItems: "center", gap: 1 }}>
-            <Text variant="h5">AI Assistant</Text>
+        <Paper shadow="xl" p="md">
+            <Title style={{ textAlign: "center" }}>AI Assistant</Title>
             <Textarea
               fullWidth
               id="outlined-controlled"
               placeholder="What are Sujith's skills?"
               label="Ask about me!"
-              variant="outlined"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              m={16}
             />
-            <Box sx={{ alignSelf: "flex-end"}}>
+            <Flex justify="flex-end">
               <Button
-                variant="contained"
-                size="small"
-                endIcon={<IoIosSend />}
+                rightSection={<IoIosSend size="24px"/>}
                 sx={{ margin: 1 }}
                 onClick={handleSubmit}
               >
                 Ask!
               </Button>
-            </Box>
-          </Box>
+            </Flex>
         </Paper>
-      </Box>
+      </Container>
       <Response opened={opened} close={close} response={response} loading={loading} error={error} />
     </>
 
