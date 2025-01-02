@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { AppShell, Burger } from '@mantine/core'
+import { AppShell, Burger, Flex } from '@mantine/core'
 import Header from './navigation/Header.jsx'
 import { useDisclosure } from '@mantine/hooks'
 import Hero from './sections/Hero.jsx'
@@ -18,10 +18,12 @@ const App = () => {
       <Header/>
 
       <AppShell.Main>
-        <Hero />
+        <Flex direction="column" gap={56}>
+          <Hero />
+          <About />
+          <Projects />
+        </Flex>
 
-        <About />
-        <Projects />
       </AppShell.Main>
 
     </AppShell>

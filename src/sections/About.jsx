@@ -14,7 +14,7 @@ const About = () => {
   return (
       <Flex direction="column" align="center">
 
-        <Box w={400} p={36} radius={3} mx="auto"  bg="white" style={{ zIndex: 300 }}>
+        <Box w={400} px={36} radius={3} mx="auto"  bg="white" style={{ zIndex: 300 }}>
           <Title style={{ textAlign: "center" }}>About Me</Title>
           <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}} size="xl">
             {aboutMeUpdated}

@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { Anchor, Avatar, Box, Button, Flex, Image, Text, UnstyledButton } from '@mantine/core'
+import { Anchor, Avatar, Box, Button, Flex, Image, Text, Title, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 const cardVariants = {
@@ -67,8 +67,13 @@ const Project = ({
         initial={cardVariants.offscreen}
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
-        direction={{ base: "column", md: "row" }}
+        direction={{ base: "column", sm: "row" }}
         style={{ overflow: "hidden" }}
+        align="center"
+        gap={12}
+        justify="space-between"
+        maw={900}
+        mx="auto"
       >
         <UnstyledButton
           onClick={openProject}
@@ -82,25 +87,20 @@ const Project = ({
           />
         </UnstyledButton>
 
-        <Box>
-          <Button onClick={openProject}>{title}</Button>
+        <Flex direction="column" gap={12}>
+          <UnstyledButton onClick={openProject}><Title order={3}>{title}</Title></UnstyledButton>
           <Text>{heading}</Text>
 
-          <Flex gap={1}>
-            {tech.map((item, index) => <Avatar key={index}>{logos[item]}</Avatar>)}
+          <Flex gap={4}>
+            {tech.map((item, index) => <Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar>)}
           </Flex>
-
 
           <Flex gap={12}>
-            <Button component="a" href={github} target="_blank" rel="noreferrer">Github</Button>
-            {isMobile ?
-              <Button onClick={openMobileAlert}>Demo</Button>
-              :
-              <Button component="a" href={link} target="_blank" rel="noreferrer">Demo</Button>
-            }
+            <Button component="a" variant="light" size="lg" href={github} target="_blank" rel="noreferrer">Github</Button>
+            {isMobile ? <Button variant="light" size="lg" onClick={openMobileAlert}>Demo</Button> : <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer">Demo</Button>}
           </Flex>
 
-        </Box>
+        </Flex>
 
       </Flex>
       <MobilePopUp opened={mobileAlertOpened} onClose={closeMobileAlert} link={link} />
