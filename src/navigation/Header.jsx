@@ -50,6 +50,8 @@ const Header = ({ opened, toggle }) => {
           </HoverCard>
         </Group>
 
+
+
         <Flex direction="column" align="center" pos="fixed" m="auto" left={0} right={0} style={{ zIndex: -10 }}>
           <Text size="xl">Sujith Varughese</Text>
           <Text>Miami, FL</Text>

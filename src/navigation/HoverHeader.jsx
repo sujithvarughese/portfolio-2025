@@ -1,5 +1,5 @@
 import React from 'react'
-import { Anchor, Box, Flex, Grid, Image, Title } from '@mantine/core'
+import { ActionIcon, Anchor, Box, Flex, Grid, Image, Title, Tooltip } from '@mantine/core'
 import profilePictureMobile from "../assets/images/profile/profile-small.png"
 import diploma from "../assets/images/certificates/diploma.png"
 import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
@@ -9,14 +9,17 @@ import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg
 import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
 import accountingCert from "../assets/images/certificates/accounting_certificate.png"
 import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
+import { projects } from "../data/projects.js"
+import project from '../components/Project.jsx'
+
 const HoverHeader = () => {
   return (
-    <Grid>
-      <Grid.Col span={5}>
-        <Image src={profilePictureMobile} alt="profile" w={280} />
-      </Grid.Col>
-      <Grid.Col span={7}>
-        <Flex justify="space-around">
+    <Flex justify="space-around" gap={12}>
+        <Box display={{ base: "none", md: "initial"}}>
+          <Image src={profilePictureMobile} alt="profile" w={280}/>
+        </Box>
+
+        <Flex justify="space-around" w="100%" gap={12}>
           <Box>
             <Title>Certificates</Title>
             <Flex direction="column">
@@ -31,11 +34,23 @@ const HoverHeader = () => {
             </Flex>
           </Box>
 
-          <Title>Projects</Title>
+          <Box>
+            <Title>Projects</Title>
+            <Grid>
+              {projects.map(project =>
+                <Grid.Col key={project.title} span={{ base: 6, sm: 4 }}>
+                  <Tooltip label={project.title}>
+                    <ActionIcon size="120px" component="a" href={project.link} target="_blank" rel="noreferrer"><Image src={project.coverImage} /></ActionIcon>
+                  </Tooltip>
+                </Grid.Col>
+
+              )}
+            </Grid>
+          </Box>
         </Flex>
 
-      </Grid.Col>
-    </Grid>
+
+    </Flex>
   )
 }
 
