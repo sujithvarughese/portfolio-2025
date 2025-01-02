@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { Avatar, Box, Button, Flex, Text } from '@mantine/core'
+import { Anchor, Avatar, Box, Button, Flex, Image, Text, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 const cardVariants = {
@@ -42,19 +42,16 @@ const Project = ({
   tech,
   featured
 }) => {
-  const [opened, { open, close }] = useDisclosure(false);
 
-  const [showDrawer, setShowDrawer] = useState(false)
-  const [showMobileModal, setShowMobileModal] = useState(false)
-  const onOpen = () => setShowDrawer(true)
-
+  const [mobileAlertOpened, { open: openMobileAlert, close: closeMobileAlert }] = useDisclosure(false);
+  const [projectOpened, { open: openProject, close: closeProject }] = useDisclosure(false);
   const [isHovering, setIsHovering] = useState(false)
 
   return (
     <>
       <ProjectDrawer
-        opened={opened}
-        close={close}
+        opened={projectOpened}
+        close={closeProject}
         title={title}
         description={description}
         images={images}
@@ -63,64 +60,50 @@ const Project = ({
         github={github}
         tech={tech}
         isMobile={isMobile}
+        openMobileAlert={openMobileAlert}
       />
-      <Box
+      <Flex
         component={motion.div}
-        sx={{ overflow: "hidden", display: "flex", justifyContent: "center", flexDirection: { xs: "column", md: "row" } }}
         initial={cardVariants.offscreen}
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
+        direction={{ base: "column", md: "row" }}
+        style={{ overflow: "hidden" }}
       >
-        <Box
-          component="button"
-          variant="contained"
-          width={{ xs: "100%", md: "50%" }}
-          onClick={onOpen}
+        <UnstyledButton
+          onClick={openProject}
           onMouseEnter={()=>setIsHovering(true)}
           onMouseLeave={()=>setIsHovering(false)}
-          sx={{ overflow: "hidden", border: "none" }}
         >
-          <Box
-            component="img"
-            src={isHovering ? coverImage : coverGif}
-            alt="project"
-            width={{ sm: 420 }}
-            sx={{ border: isHovering ? "5px solid #ED6C02" : "", borderRadius: 3 }}
+          <Image
+            src={isHovering ? coverImage : coverGif} alt="project"
+            w={420}
+            style={{ border: isHovering ? "5px solid #ED6C02" : "", borderRadius: 3 }}
           />
-        </Box>
+        </UnstyledButton>
 
+        <Box>
+          <Button onClick={openProject}>{title}</Button>
+          <Text>{heading}</Text>
 
-        <Box
-          component={motion.div}
-          width={{ xs: "100%", md: "50%" }}
-          sx={{ placeSelf: "center", gap: 2, height: "100%", overflow: "hidden" }}
-        >
-          <Box display="flex" alignItems="center">
-            <Button onClick={onOpen} sx={{ p: 0, fontSize: 24, color: "warning.main" }}>{title}</Button>
-          </Box>
-          <Text variant="subtitle2" fontSize={18}>{heading}</Text>
-
-          <Box sx={{ display: "flex", gap: 1 }}>
+          <Flex gap={1}>
             {tech.map((item, index) => <Avatar key={index}>{logos[item]}</Avatar>)}
-          </Box>
+          </Flex>
 
 
-          <Flex direction="horizontal" style={{ gap: "36px", paddingY: "10px" }}>
-            <a href={github} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Github</Text></a>
-            {
-              isMobile ?
-                <>
-                  <Box component="button" onClick={()=>setShowMobileModal(!showMobileModal)} p={0} border="none" ><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></Box>
-                  {showMobileModal && <MobilePopUp open={showMobileModal} onClose={() => setShowMobileModal(false)} link={link} />}
-                </>
-                :
-                <a href={link} target="_blank" rel="noreferrer"><Text variant="subtitle1" fontSize="20px" color="warning.main">Demo</Text></a>
+          <Flex gap={12}>
+            <Button component="a" href={github} target="_blank" rel="noreferrer">Github</Button>
+            {isMobile ?
+              <Button onClick={openMobileAlert}>Demo</Button>
+              :
+              <Button component="a" href={link} target="_blank" rel="noreferrer">Demo</Button>
             }
           </Flex>
 
         </Box>
 
-      </Box>
+      </Flex>
+      <MobilePopUp opened={mobileAlertOpened} onClose={closeMobileAlert} link={link} />
     </>
   )
 }

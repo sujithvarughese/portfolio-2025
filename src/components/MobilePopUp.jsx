@@ -9,7 +9,7 @@ const MobilePopUp = ({ opened, onClose, link }) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={style}>
+      <Box>
         <Text id="modal-modal-title" variant="h6" component="h2">
           Warning
         </Text>
@@ -22,16 +22,5 @@ const MobilePopUp = ({ opened, onClose, link }) => {
   )
 }
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  backgroundColor: "white",
-  boxShadow: 24,
-  p: 4,
-  borderRadius: 2
-};
 
 export default MobilePopUp
