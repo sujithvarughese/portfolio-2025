@@ -3,73 +3,59 @@ import { aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
 import { motion } from 'motion/react'
 import santaHatImg from "../assets/images/backgrounds/santa-hat.png"
-import { Box, Container, Image, Text, Title } from '@mantine/core'
+import { Box, Container, Grid, Image, Text, Title } from '@mantine/core'
 
 
 const About = () => {
 
-  const cardVariants = {
-    offscreen: {
-      y: 200,
-      scale: 0.3,
-      opacity: 0.2
-    },
-    onscreen: {
-      x: 0,
-      y: 0,
-      scale: 1,
-      opacity: 1,
-      transition: {
-        ease: "easeInOut",
-        duration: 1
-      }
-    },
-    viewport: { once: true },
-  };
 
   return (
+      <Grid pos="relative" w="100%" h="100vh">
 
-      <Container
-        component={motion.section}
-        style={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 16 }}
-        initial={{...cardVariants.offscreen, x: -300}}
-        whileInView={{ ...cardVariants.onscreen}}
-        viewport={cardVariants.viewport}
-      >
-          <Box
-            w={600}
-            h={600}
-            m={{ xs: "auto", md: "initial" }}
-            justify='center'
-            bg='red.1'
-            p={{xs: 3, md: 8, lg: 10}}
-            radius={3}
-            pos="relative"
-          >
+        <Box w={{ base: 400, md: 600 }} h={600} p={{xs: 3, md: 8, lg: 10}} radius={3}
+          pos="absolute" left={0} right={0} top={0} bottom={0} m="auto"
+        >
+          <Title style={{ textAlign: "center" }}>About Me</Title>
+          <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}} size="xl">
+            {aboutMeUpdated}
+          </Text>
+        </Box>
 
-            <Image src={santaHatImg} alt="santa_hat" w={250} pos="absolute" top={-180} left={200} style={{ zIndex: 1000}}/>
+        <Image
+          src={profilePicture}
+          alt="Profile Picture"
+          borderRadius={3}
+          pos="absolute"
+          top={10}
+          right={160}
+          w={240}
+          style={{ zIndex: -100}}
+        />
 
-            <Title pt={42} pl={42}>About Me</Title>
+        <Image
+          src={profilePicture}
+          alt="Profile Picture"
+          borderRadius={3}
+          pos="absolute"
+          top={240}
+          left={10}
+          w={240}
+          style={{ zIndex: -100}}
+        />
 
-            <Text style={{ whiteSpace: "break-spaces"}} size="xl" p={42}>
-              {aboutMeUpdated}
-            </Text>
-          </Box>
+        <Image
+          src={profilePicture}
+          alt="Profile Picture"
+          borderRadius={3}
+          pos="absolute"
+          bottom={120}
+          left={360}
+          margin="auto"
+          w={300}
+          style={{ zIndex: -100}}
+        />
 
-          <Box pos="relative">
-            <Image
-              src={profilePicture}
-              alt="Profile Picture"
-              borderRadius={3}
-              pos="absolute"
-              right={0}
-              top={-240}
-              w={530}
-              h={530}
-              style={{ zIndex: -100}}
-            />
-          </Box>
-      </Container>
+      </Grid>
 
 
 

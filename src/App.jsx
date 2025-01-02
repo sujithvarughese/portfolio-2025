@@ -19,7 +19,7 @@ const App = () => {
 
       <AppShell.Main>
         <Hero />
-        <SkillList />
+
         <About />
         <Projects />
       </AppShell.Main>

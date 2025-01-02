@@ -82,16 +82,10 @@ const Hero = () => {
               </Anchor>
             </Flex>
           </Grid.Col>
-
         </Grid>
-
-
-
-
-
       </BackgroundImage>
-      <Assistant />
-      <Skills />
+
+
 
     </Box>
   )
