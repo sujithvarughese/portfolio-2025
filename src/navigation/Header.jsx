@@ -37,7 +37,7 @@ const Header = ({ opened, toggle }) => {
 
   return (
     <AppShellHeader>
-      <Flex align="center" justify="space-between" py={12} h="100%">
+      <Flex align="center" justify="space-between" p={12} h="100%">
         <Group>
           <HoverCard width="100%" offset={15}>
             <HoverCard.Target>

@@ -46,15 +46,15 @@ const Hero = () => {
 
   return (
     <Grid as="section" h="100vh" bg="black" justify="center" align="center">
-        <Grid w="100%">
+        <Grid>
           <Image src={profilePicture2} maw={1080} m="auto" py={84} display={{ base: "none", md: "initial"}} />
           <Image src={profilePictureMobile} w="70%" m="auto" py={84} display={{ md: "none"}} />
           <Grid.Col  justify="center" align="center" mt={-120} bg="black">
-            <Title c="white" style={{ fontSize: 42}}>{currentNameText}</Title>
+            <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
             <Title c="white" order={2}  whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Title>
             <Flex flexDirection="row" justify="center" align="center">
               <motion.div
-                initial={{ opacity: 0, y: -1000, x: -50 }}
+                initial={{ opacity: 0, y: -1000 }}
                 animate={{
                   opacity: 1, y: 0, x: 0,
                   transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
