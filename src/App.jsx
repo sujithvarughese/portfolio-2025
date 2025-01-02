@@ -12,9 +12,8 @@ const App = () => {
   return (
     <AppShell
       header={{ height: 60 }}
-      maw="1280px"
+      maw="1920px"
       m="auto"
-      padding="md"
     >
       <Header/>
 

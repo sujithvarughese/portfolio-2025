@@ -32,12 +32,11 @@ const About = () => {
       <Container
         component={motion.section}
         style={{ display: { xs: "none", md: "revert" }, marginBottom: 52, marginTop: 16 }}
+        initial={{...cardVariants.offscreen, x: -300}}
+        whileInView={{ ...cardVariants.onscreen}}
+        viewport={cardVariants.viewport}
       >
           <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: -300}}
-            whileInView={{ ...cardVariants.onscreen}}
-            viewport={cardVariants.viewport}
             w={600}
             h={600}
             m={{ xs: "auto", md: "initial" }}
@@ -57,13 +56,7 @@ const About = () => {
             </Text>
           </Box>
 
-          <Box
-            component={motion.div}
-            initial={{...cardVariants.offscreen, x: 50}}
-            whileInView={{ ...cardVariants.onscreen}}
-            viewport={cardVariants.viewport}
-            pos="relative"
-          >
+          <Box pos="relative">
             <Image
               src={profilePicture}
               alt="Profile Picture"

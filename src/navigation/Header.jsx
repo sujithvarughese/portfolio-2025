@@ -6,9 +6,9 @@ import {
   Box,
   Burger,
   Button,
-  Flex,
+  Flex, Grid, Group, HoverCard,
   Image,
-  Menu,
+  Menu, Text,
   UnstyledButton
 } from '@mantine/core'
 import svImage from "../assets/images/profile/sv.jpeg"
@@ -24,48 +24,46 @@ import businessManagementCert from "../assets/images/certificates/business_manag
 const emailAddress = "sujith.varug@gmail.com"
 import linkedInIcon from '../assets/images/icons/linkedin-icon.svg';
 import githubIcon from "../assets/images/icons/github-mark-white.svg"
+import mailIcon from "../assets/images/icons/send-message.svg"
+import cvIcon from "../assets/images/icons/cv.png"
+import HoverHeader from './HoverHeader.jsx'
+
 const Header = ({ opened, toggle }) => {
+
+  const closeHoverHeader = () => {
+
+  }
+
   return (
     <AppShellHeader>
-      <Flex justify="space-between" align="center" h="100%" p={24} bg="black">
-        <Flex align="center">
-          <Image src={svImage} alt="SV" height={55} ></Image>
-          <Menu shadow="md" width={200}>
-            <Menu.Target>
-              <Button variant="transparent">Certificates</Button>
-            </Menu.Target>
-            <Menu.Dropdown>
-              <Menu.Label>Certificates</Menu.Label>
-              <Menu.Item component="a" href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</Menu.Item>
-              <Menu.Item component="a" href={compTiaCert} target="_blank" rel="noreferrer">CompTIA A+</Menu.Item>
-              <Menu.Item component="a" href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</Menu.Item>
-              <Menu.Item component="a" href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</Menu.Item>
-              <Menu.Item component="a" href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</Menu.Item>
-              <Menu.Item component="a" href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</Menu.Item>
-              <Menu.Item component="a" href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</Menu.Item>
-              <Menu.Item component="a" href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</Menu.Item>
-            </Menu.Dropdown>
-          </Menu>
+      <Flex align="center" justify="space-between" py={12} h="100%">
 
-          <Button component="a" variant="transparent" href={resume} target="_blank" rel="noreferrer">Resume</Button>
+
+        <Group>
+          <HoverCard width="100%" offset={15}>
+            <HoverCard.Target>
+              <Burger size="sm"/>
+            </HoverCard.Target>
+            <HoverCard.Dropdown>
+              <HoverHeader />
+            </HoverCard.Dropdown>
+          </HoverCard>
+        </Group>
+
+        <Flex direction="column" align="center" pos="fixed" m="auto" left={0} right={0} style={{ zIndex: -10 }}>
+          <Text size="xl">Sujith Varughese</Text>
+          <Text>Miami, FL</Text>
         </Flex>
 
-        <Flex align="center">
-          <Flex className="social-icon">
-            <ActionIcon component="a" href="https://www.linkedin.com/in/sujithvarughese/" className="social-icon" target="_blank" rel="noreferrer"><Image src={linkedInIcon} alt="Icon" /></ActionIcon>
-            <ActionIcon component="a" href="http://github.com/sujithvarughese" className="social-icon" target="_blank" rel="noreferrer"><Image src={githubIcon} alt="Icon" /></ActionIcon>
-          </Flex>
-          <Box className="connect">
-            <UnstyledButton component="a" href={`mailto:${emailAddress}`}>CONTACT ME</UnstyledButton>
-          </Box>
-
+        <Flex className="social-icon" gap={6}>
+          <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer"><Image src={cvIcon}  alt="cv" w="50%" /></ActionIcon>
+          <ActionIcon component="a" href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer"><Image src={linkedInIcon} alt="linkedin" w="50%"/></ActionIcon>
+          <ActionIcon component="a" href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><Image src={githubIcon} alt="github" w="50%"/></ActionIcon>
+          <ActionIcon component="a" href={`mailto:${emailAddress}`}><Image src={mailIcon} alt="mail" w="50%"/></ActionIcon>
         </Flex>
-
 
 
       </Flex>
-
-
     </AppShellHeader>
   )
 }
