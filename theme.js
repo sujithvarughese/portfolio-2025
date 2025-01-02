@@ -3,7 +3,7 @@ import { createTheme } from '@mantine/core'
 const theme = createTheme({
   fontFamily: 'Avenir Next Condensed, Montserrat, Trebuchet, Verdana, sans-serif',
   fontFamilyMonospace: 'Avenir Next Condensed, Montserrat, Trebuchet, Monaco, Courier, monospace',
-  headings: { fontFamily: 'Avenir Next Condensed, Montserrat, Trebuchet, Greycliff CF, sans-serif' },
+  headings: { fontFamily: 'Italiana, Avenir Next Condensed, Montserrat, Trebuchet, Greycliff CF, sans-serif' },
   palette: {
     primary: {
       light: "#35C37D",

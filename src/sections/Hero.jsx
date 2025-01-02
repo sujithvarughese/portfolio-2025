@@ -45,10 +45,11 @@ const Hero = () => {
 
 
   return (
-    <Box as="section">
-      <BackgroundImage src={profilePicture2} h="100vh">
-        <Grid w="100%" justify="center" align="center" pos="absolute" bottom={0}>
-          <Grid.Col  justify="center" align="center">
+    <Grid as="section" h="100vh" bg="black" justify="center" align="center">
+        <Grid w="100%">
+          <Image src={profilePicture2} maw={1080} m="auto" py={84} display={{ base: "none", md: "initial"}} />
+          <Image src={profilePictureMobile} w="70%" m="auto" py={84} display={{ md: "none"}} />
+          <Grid.Col  justify="center" align="center" mt={-120} bg="black">
             <Title c="white" style={{ fontSize: 42}}>{currentNameText}</Title>
             <Title c="white" order={2}  whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Title>
             <Flex flexDirection="row" justify="center" align="center">
@@ -83,11 +84,11 @@ const Hero = () => {
             </Flex>
           </Grid.Col>
         </Grid>
-      </BackgroundImage>
 
 
 
-    </Box>
+
+    </Grid>
   )
 }
 

@@ -8,7 +8,7 @@ import {
   Button,
   Flex, Grid, Group, HoverCard,
   Image,
-  Menu, Text,
+  Menu, Text, Title, Tooltip,
   UnstyledButton
 } from '@mantine/core'
 import svImage from "../assets/images/profile/sv.jpeg"
@@ -27,6 +27,7 @@ import githubIcon from "../assets/images/icons/github-mark-white.svg"
 import mailIcon from "../assets/images/icons/send-message.svg"
 import cvIcon from "../assets/images/icons/cv.png"
 import HoverHeader from './HoverHeader.jsx'
+import { IoLocationSharp } from 'react-icons/io5'
 
 const Header = ({ opened, toggle }) => {
 
@@ -37,8 +38,6 @@ const Header = ({ opened, toggle }) => {
   return (
     <AppShellHeader>
       <Flex align="center" justify="space-between" py={12} h="100%">
-
-
         <Group>
           <HoverCard width="100%" offset={15}>
             <HoverCard.Target>
@@ -53,15 +52,23 @@ const Header = ({ opened, toggle }) => {
 
 
         <Flex direction="column" align="center" pos="fixed" m="auto" left={0} right={0} style={{ zIndex: -10 }}>
-          <Text size="xl">Sujith Varughese</Text>
+          <Title order={2}>Sujith Varughese</Title>
           <Text>Miami, FL</Text>
         </Flex>
 
         <Flex className="social-icon" gap={6}>
-          <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer"><Image src={cvIcon}  alt="cv" w="50%" /></ActionIcon>
-          <ActionIcon component="a" href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer"><Image src={linkedInIcon} alt="linkedin" w="50%"/></ActionIcon>
-          <ActionIcon component="a" href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer"><Image src={githubIcon} alt="github" w="50%"/></ActionIcon>
-          <ActionIcon component="a" href={`mailto:${emailAddress}`}><Image src={mailIcon} alt="mail" w="50%"/></ActionIcon>
+          <Tooltip label="Resumé">
+            <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={cvIcon}  alt="cv" w="50%" /></ActionIcon>
+          </Tooltip>
+          <Tooltip label="LinkedIn">
+            <ActionIcon component="a" href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={linkedInIcon} alt="linkedin" w="50%"/></ActionIcon>
+          </Tooltip>
+          <Tooltip label="GitHub">
+            <ActionIcon component="a" href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={githubIcon} alt="github" w="50%"/></ActionIcon>
+          </Tooltip>
+          <Tooltip label="Email">
+            <ActionIcon component="a" href={`mailto:${emailAddress}`}><Image src={mailIcon} alt="mail" w="50%"/></ActionIcon>
+          </Tooltip>
         </Flex>
 
 
