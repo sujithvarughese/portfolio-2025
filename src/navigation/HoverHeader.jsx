@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActionIcon, Anchor, Box, Flex, Grid, Image, Title, Tooltip } from '@mantine/core'
+import { ActionIcon, Anchor, Box, Flex, Grid, Image, Indicator, Title, Tooltip } from '@mantine/core'
 import profilePictureMobile from "../assets/images/profile/profile-small.png"
 import diploma from "../assets/images/certificates/diploma.png"
 import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
@@ -14,9 +14,9 @@ import project from '../components/Project.jsx'
 
 const HoverHeader = () => {
   return (
-    <Flex justify="space-around" gap={12}>
-        <Box display={{ base: "none", md: "initial"}}>
-          <Image src={profilePictureMobile} alt="profile" w={280}/>
+    <Flex justify="space-between" gap={12}>
+        <Box display={{ base: "none", sm: "initial"}}>
+          <Image src={profilePictureMobile} alt="profile" w={200}/>
         </Box>
 
         <Flex justify="space-around" w="100%" gap={12}>
@@ -36,12 +36,14 @@ const HoverHeader = () => {
 
           <Box>
             <Title>Projects</Title>
-            <Grid>
+            <Grid maw={420}>
               {projects.map(project =>
-                <Grid.Col key={project.title} span={{ base: 6, sm: 4 }}>
-                  <Tooltip label={project.title}>
-                    <ActionIcon size="120px" component="a" href={project.link} target="_blank" rel="noreferrer"><Image src={project.coverImage} /></ActionIcon>
-                  </Tooltip>
+                <Grid.Col key={project.title} span={{ base: 6, xs: 4 }}>
+                  <Indicator label={project.title} position="bottom-center" offset={6} size="lg">
+                    <Tooltip label={project.heading} multiline>
+                      <ActionIcon size="110px" component="a" href={project.link} target="_blank" rel="noreferrer"><Image src={project.coverImage} /></ActionIcon>
+                    </Tooltip>
+                  </Indicator>
                 </Grid.Col>
 
               )}
