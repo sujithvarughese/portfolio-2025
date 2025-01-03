@@ -1,25 +1,11 @@
-
 import { useEffect, useState } from 'react'
-import Response from './Response.jsx'
-import * as React from 'react'
 import useSubmit from '../../hooks/useSubmit.js'
-import {
-  Box,
-  Button,
-  Container,
-  Drawer,
-  Flex,
-  Grid,
-  Menu,
-  Paper,
-  ScrollArea,
-  Text,
-  Textarea,
-  Title
-} from '@mantine/core'
+import { Box, Button, Drawer, Flex, Textarea, Title } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IoIosSend } from "react-icons/io";
-import Chat from './Chat.jsx'
+import Message from './Message.jsx'
+import * as React from 'react'
+import LoadingMessage from './LoadingMessage.jsx'
 
 const Assistant = ({ opened, close }) => {
 
@@ -41,7 +27,6 @@ const Assistant = ({ opened, close }) => {
   }
 
   useEffect(() => {
-    console.log(chat)
     if (!response || chat[0]?.sender === "assistant") {
       return
     }
@@ -56,8 +41,11 @@ const Assistant = ({ opened, close }) => {
       position="right"
       title={<Title>AI Assistant</Title>}
     >
-      <Flex direction="column" gap={16}>
-        <Chat chat={chat} />
+      <Flex direction="column" gap={20}>
+        <Box>
+          {chat?.map((message, index) => <Message key={index} {...message} />).reverse()}
+          {loading && <LoadingMessage />}
+        </Box>
         <Textarea
           autosize
           minRows={4}
@@ -66,8 +54,8 @@ const Assistant = ({ opened, close }) => {
           value={query}
           onChange={(e) => setQuery(e.currentTarget.value)}
         />
-        <Flex justify="flex-end" py={12}>
-          <Button onClick={handleSubmit} loading={loading}>Send</Button>
+        <Flex justify="flex-end">
+          <Button onClick={handleSubmit} loading={loading} rightSection={<IoIosSend size={20}/>}>Send</Button>
         </Flex>
       </Flex>
 
