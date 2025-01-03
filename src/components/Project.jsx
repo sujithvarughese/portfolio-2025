@@ -82,7 +82,7 @@ const Project = ({
           >
             <Image
               src={isHovering ? coverImage : coverGif} alt="project"
-              w={{ base: 320, sm: 380 }}
+              w={{ base: 240, sm: 380 }}
               style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
             />
           </UnstyledButton>

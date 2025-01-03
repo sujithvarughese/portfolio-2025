@@ -12,10 +12,10 @@ const About = () => {
 
 
   return (
-      <Flex direction="column" align="center" justify="space-around" h="100vh" pos="relative" bg="white">
+      <Flex direction="column" align="center" justify="space-evenly" h="100vh" pos="relative" bg="white">
         <Box w={400} radius={3} px={16} mx="auto"  bg="white">
           <Title style={{ textAlign: "center", fontSize: 42 }}>About Me</Title>
-          <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}} size="xl">
+          <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}}>
             {aboutMeUpdated}
           </Text>
         </Box>
@@ -25,16 +25,6 @@ const About = () => {
           alt="Profile Picture"
           w={{base: 400, sm: 640 }}
           radius={2}
-        />
-        <Box
-          bg="black"
-          borderRadius={3}
-          w={{ base: 410, sm: 660 }}
-          h={{ base: 245, sm: 395 }}
-          pos="absolute"
-          bottom={{ base: 100, sm: 60 }}
-          style={{ zIndex: -10, borderRadius: 2 }}
-          display={{ base: "none", sm: "initial"}}
         />
       </Flex>
 
