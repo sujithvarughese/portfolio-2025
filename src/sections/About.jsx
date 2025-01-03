@@ -34,6 +34,7 @@ const About = () => {
           pos="absolute"
           bottom={{ base: 100, sm: 60 }}
           style={{ zIndex: -10, borderRadius: 2 }}
+          display={{ base: "none", sm: "initial"}}
         />
       </Flex>
 
