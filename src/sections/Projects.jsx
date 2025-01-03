@@ -8,7 +8,7 @@ const Projects = () => {
   return (
 
     <Box id="projects" px={{ base: 4, sm: 0 }} bg="white">
-      <Title style={{ textAlign: "center" }}>Work</Title>
+      <Title style={{ textAlign: "center", fontSize: 42 }}>Work</Title>
       <Flex direction="column" gap={42} justify="space-between">
         {projects.map(project => <Project key={project.title} {...project} />)}
       </Flex>

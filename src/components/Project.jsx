@@ -88,8 +88,8 @@ const Project = ({
           </UnstyledButton>
 
           <Flex direction="column" gap={12}>
-            <UnstyledButton onClick={openProject}><Title order={3}>{title}</Title></UnstyledButton>
-            <Text>{heading}</Text>
+            <UnstyledButton onClick={openProject}><Title order={2}>{title}</Title></UnstyledButton>
+            <Text size="lg">{heading}</Text>
 
             <Flex gap={4} justify={{ base: "center", sm: "flex-start" }}>
               {tech.map((item, index) => <Tooltip label={item}><Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}

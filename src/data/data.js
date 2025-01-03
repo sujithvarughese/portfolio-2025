@@ -1,5 +1,5 @@
 export const fullName = "Sujith Varughese"
-export const bio = "Software Engineer"
+export const bio = "Full Stack Engineer"
 export const introductionText = "My name is Sujith."
 export const descriptionText = "I am a software developer based in Miami, FL specializing in JavaScript, React, and React Native."
 
