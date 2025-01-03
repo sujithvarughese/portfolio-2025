@@ -39,7 +39,7 @@ const Header = ({ opened, toggle }) => {
     <AppShellHeader>
       <Flex align="center" justify="space-between" p={12} h="100%">
         <Group>
-          <HoverCard width="100%" offset={15}>
+          <HoverCard width="98%" offset={15}>
             <HoverCard.Target>
               <Burger size="sm"/>
             </HoverCard.Target>

@@ -18,12 +18,12 @@ import mailIcon from '../assets/images/icons/send-message.svg'
 
 const HoverHeader = () => {
   return (
-    <Flex justify="space-between" gap={12}>
+    <Flex justify="space-between">
         <Box display={{ base: "none", md: "initial"}}>
           <Image src={profilePictureMobile} alt="profile" w={200}/>
         </Box>
 
-        <Flex justify="space-around" w="100%" gap={12}>
+        <Flex justify="space-around" w="100%">
           <Box>
             <Title order={2}>Certificates</Title>
             <Flex direction="column">
@@ -36,11 +36,21 @@ const HoverHeader = () => {
               <Anchor href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</Anchor>
               <Anchor href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</Anchor>
             </Flex>
+
+            <Box display={{ sm: "none" }} mt={12}>
+              <Title order={2}>Links</Title>
+              <Flex direction="column">
+                <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
+                <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
+                <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
+              </Flex>
+              <Button my={12} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
+            </Box>
           </Box>
 
           <Box>
             <Title order={2}>Projects</Title>
-            <Grid maw={340}>
+            <Grid maw={{ base: 220, sm: 340 }}>
               {projects.map(project =>
                 <Grid.Col key={project.title} span={{ base: 6, xs: 4 }}>
                   <Indicator label={project.title} position="bottom-center" offset={6} size="lg">
@@ -49,23 +59,20 @@ const HoverHeader = () => {
                     </Tooltip>
                   </Indicator>
                 </Grid.Col>
-
               )}
             </Grid>
           </Box>
 
-          <Box>
+          <Box display={{ base: "none", sm: "initial" }}>
             <Title order={2}>Links</Title>
             <Flex direction="column">
               <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
               <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
               <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
             </Flex>
-
-            <Button my={24} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
-
-
+            <Button my={12} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
           </Box>
+
         </Flex>
 
 

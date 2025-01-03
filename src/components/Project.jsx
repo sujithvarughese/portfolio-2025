@@ -66,7 +66,7 @@ const Project = ({
         initial={cardVariants.offscreen}
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
-        shadow="xl" py={24} px={{ base: 0, sm: 24 }} maw={850} mx="auto">
+        shadow="xl" py={24} px={{ base: 12, sm: 24 }} maw={850} mx="auto">
         <Flex
           direction={{ base: "column", sm: "row" }}
           style={{ overflow: "hidden" }}
@@ -82,7 +82,7 @@ const Project = ({
           >
             <Image
               src={isHovering ? coverImage : coverGif} alt="project"
-              w={380}
+              w={{ base: 320, sm: 380 }}
               style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
             />
           </UnstyledButton>

@@ -64,7 +64,6 @@ const Assistant = ({ opened, close }) => {
           </Button>
         </Flex>
       </Flex>
-
     </Drawer>
 
   )

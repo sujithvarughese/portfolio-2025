@@ -30,8 +30,9 @@ const App = () => {
           <Footer />
         </Flex>
         <Assistant opened={opened} close={close} />
+
         <AppShell.Footer>
-          <Flex justify="flex-end" p={12}>
+          <Flex justify="flex-end" p={6}>
             <AssistantButton open={open}/>
           </Flex>
         </AppShell.Footer>
