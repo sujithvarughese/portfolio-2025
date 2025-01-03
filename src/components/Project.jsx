@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { Anchor, Avatar, Box, Button, Flex, Image, Paper, Text, Title, UnstyledButton } from '@mantine/core'
+import { Anchor, Avatar, Box, Button, Flex, Image, Paper, Text, Title, Tooltip, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 const cardVariants = {
@@ -92,7 +92,7 @@ const Project = ({
             <Text>{heading}</Text>
 
             <Flex gap={4} justify={{ base: "center", sm: "flex-start" }}>
-              {tech.map((item, index) => <Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar>)}
+              {tech.map((item, index) => <Tooltip label={item}><Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}
             </Flex>
 
             <Flex gap={12} justify={{ base: "center", sm: "flex-start" }}>
