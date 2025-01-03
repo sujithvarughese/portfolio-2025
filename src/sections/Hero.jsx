@@ -49,11 +49,11 @@ const Hero = () => {
     <Flex direction="column" align="center" justify="space-evenly" h="88vh" bg="black">
       <Flex justify="center">
         <Image src={profilePicture2} w="80%" maw={1400} m="auto" display={{ base: "none", xs: "initial"}} />
-        <Image src={profilePictureMobile} w="70%" maw={350} m="auto" mb={-104} display={{ xs: "none"}} />
+        <Image src={profilePictureMobile} w="70%" maw={350} m="auto" mb={-64} display={{ xs: "none"}} />
       </Flex>
 
       <Flex direction="column" align="center">
-        <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
+        <Title c="white" style={{ fontSize: 42 }} display={{ base: "none", xs: "initial" }}>{currentNameText}</Title>
         <Title c="white" order={2}>{currentIntroductionText}</Title>
         <Flex justify="center" align="center">
           <motion.div
