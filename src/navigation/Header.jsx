@@ -15,7 +15,8 @@ const Header = ({ open }) => {
   return (
     <AppShellHeader>
       <Flex align="center" justify="space-between" p={12}>
-        <Flex align="center" gap={8}>
+
+        <Group>
           <HoverCard width="98%" offset={13}>
             <HoverCard.Target>
               <Burger  />
@@ -27,7 +28,7 @@ const Header = ({ open }) => {
 
           <Flex className="social-icon" gap={6}>
             <Tooltip label="Resumé">
-              <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={cvIcon} alt="cv" w="50%" /></ActionIcon>
+              <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer" display={{ base: "none", xs: "initial" }}><Image src={cvIcon} alt="cv" w="50%" /></ActionIcon>
             </Tooltip>
             <Tooltip label="LinkedIn">
               <ActionIcon component="a" href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={linkedInIcon} alt="linkedin" w="50%"/></ActionIcon>
@@ -36,10 +37,10 @@ const Header = ({ open }) => {
               <ActionIcon component="a" href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer" display={{ base: "none", sm: "initial" }}><Image src={githubIcon} alt="github" w="50%"/></ActionIcon>
             </Tooltip>
             <Tooltip label="Email">
-              <ActionIcon component="a" href={`mailto:${emailAddress}`}><Image src={mailIcon} alt="mail" w="50%"/></ActionIcon>
+              <ActionIcon component="a" href={`mailto:${emailAddress}`} display={{ base: "none", xs: "initial" }}><Image src={mailIcon} alt="mail" w="50%"/></ActionIcon>
             </Tooltip>
           </Flex>
-        </Flex>
+        </Group>
 
         <Flex direction="column" align="center" pos="fixed" m="auto" left={0} right={0} style={{ zIndex: -10 }}>
           <Title order={2}>Sujith Varughese</Title>
