@@ -40,7 +40,7 @@ const Hero = () => {
 
   return (
 
-    <Flex direction="column" align="center" justify="space-evenly" h="95vh" bg="black" pos="sticky" top={0} style={{ zIndex: -100 }}>
+    <Flex direction="column" align="center" justify="space-evenly" h="100vh" bg="black" pos="sticky" top={0} style={{ zIndex: -100 }}>
       <Flex justify="center">
         <Image src={profilePicture2} w="80%" maw={1400} m="auto" radius={2} display={{ base: "none", xs: "initial"}} />
         <Image src={profilePictureMobile} w="70%" maw={350} m="auto" radius={2} my={-64} display={{ xs: "none"}} />

@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <AppShell m="auto">
-      <Header/>
+      <Header open={open}/>
 
       <AppShell.Main>
         <Flex direction="column" pos="relative">
@@ -25,17 +25,9 @@ const App = () => {
           <Projects />
           <Footer />
         </Flex>
-        <Assistant opened={opened} close={close} />
-
-        <AppShell.Footer>
-          <Flex justify="flex-end" p={6}>
-            <AssistantButton open={open}/>
-          </Flex>
-        </AppShell.Footer>
-
-
       </AppShell.Main>
 
+      <Assistant opened={opened} close={close} />
     </AppShell>
   )
 }

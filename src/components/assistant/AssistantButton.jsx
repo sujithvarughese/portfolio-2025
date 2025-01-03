@@ -1,12 +1,15 @@
 import React from 'react'
-import { Button } from '@mantine/core'
+import { ActionIcon, Indicator, Tooltip } from '@mantine/core'
+import { RiAiGenerate2 } from "react-icons/ri";
 
 const AssistantButton = ({ open }) => {
   return (
-    <>
-      <Button display={{ sm: "none" }} onClick={open} size="sm">AI Assistant</Button>
-      <Button display={{ base: "none", sm: "initial" }} onClick={open} size="xl">AI Assistant</Button>
-    </>
+    <Tooltip label="AI Assistant" >
+      <Indicator label="New" position="top-start" size={16} color="orange.7">
+        <ActionIcon variant="gradient" onClick={open} size={42}><RiAiGenerate2 size={32} /></ActionIcon>
+      </Indicator>
+    </Tooltip>
+
   )
 }
 
