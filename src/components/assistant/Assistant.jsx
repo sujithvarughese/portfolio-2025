@@ -41,7 +41,7 @@ const Assistant = ({ opened, close }) => {
       position="right"
       title={<Title>AI Assistant</Title>}
       size="sm"
-
+      trapFocus={false}
     >
       <Flex direction="column" gap={20}>
         <Box>
