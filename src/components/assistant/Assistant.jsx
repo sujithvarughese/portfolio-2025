@@ -48,7 +48,6 @@ const Assistant = ({ opened, close }) => {
           {loading && <LoadingMessage />}
         </Box>
         <Textarea
-          autosize
           minRows={4}
           name="body"
           placeholder="Create Message"
