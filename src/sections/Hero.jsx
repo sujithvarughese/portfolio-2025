@@ -46,10 +46,10 @@ const Hero = () => {
 
   return (
 
-    <Flex direction="column" align="center" justify="center" h="88vh" bg="black">
+    <Flex direction="column" align="center" justify="space-around" h="89vh" bg="black">
       <Box>
-        <Image src={profilePicture2} maw={1080} m="auto" display={{ base: "none", md: "initial"}} />
-        <Image src={profilePictureMobile} w="70%" m="auto" display={{ md: "none"}} />
+        <Image src={profilePicture2} maw={1080} m="auto" display={{ base: "none", sm: "initial"}} />
+        <Image src={profilePictureMobile} w="70%" m="auto" display={{ sm: "none"}} />
       </Box>
 
       <Flex direction="column" align="center" h="25%">

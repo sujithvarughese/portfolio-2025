@@ -59,7 +59,7 @@ const HoverHeader = () => {
             <Flex direction="column">
               <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
               <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
-              <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GutHub</Anchor>
+              <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
             </Flex>
 
             <Button my={24} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>

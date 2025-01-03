@@ -12,8 +12,8 @@ const About = () => {
 
 
   return (
-      <Flex direction="column" align="center">
-        <Box w={400} px={36} radius={3} mx="auto"  bg="white">
+      <Flex direction="column" align="center" justify="space-around" h="89vh">
+        <Box w={420} px={16} radius={3} mx="auto"  bg="white">
           <Title style={{ textAlign: "center" }}>About Me</Title>
           <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}} size="xl">
             {aboutMeUpdated}
@@ -24,7 +24,7 @@ const About = () => {
           src={profilePicture}
           alt="Profile Picture"
           borderRadius={3}
-          w={360}
+          w={420}
         />
       </Flex>
 
