@@ -41,20 +41,24 @@ const Assistant = ({ opened, close }) => {
       position="right"
       title={<Title>AI Assistant</Title>}
       size="sm"
+
     >
       <Flex direction="column" gap={20}>
         <Box>
           {chat?.map((message, index) => <Message key={index} {...message} />).reverse()}
           {loading && <LoadingMessage />}
         </Box>
-        <Textarea
-          minRows={4}
-          name="body"
-          placeholder="Create Message"
-          value={query}
-          onChange={(e) => setQuery(e.currentTarget.value)}
-        />
-        <Flex justify="flex-end">
+        <Box mx={12}>
+          <Textarea
+            minRows={4}
+            name="body"
+            placeholder="Create Message"
+            value={query}
+            onChange={(e) => setQuery(e.currentTarget.value)}
+          />
+        </Box>
+
+        <Flex justify="flex-end" mx={12}>
           <Button
             onClick={handleSubmit}
             loading={loading}
