@@ -72,7 +72,7 @@ const Project = ({
         align="center"
         gap={12}
         justify="space-between"
-        maw={900}
+        maw={850}
         mx="auto"
       >
         <UnstyledButton

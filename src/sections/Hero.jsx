@@ -45,50 +45,32 @@ const Hero = () => {
 
 
   return (
-    <Grid as="section" h="100vh" bg="black" justify="center" align="center">
-        <Grid>
-          <Image src={profilePicture2} maw={1080} m="auto" py={84} display={{ base: "none", md: "initial"}} />
-          <Image src={profilePictureMobile} w="70%" m="auto" py={84} display={{ md: "none"}} />
-          <Grid.Col  justify="center" align="center" mt={-120} bg="black">
-            <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
-            <Title c="white" order={2}  whiteSpace="break-spaces" py={1}>{currentIntroductionText}</Title>
-            <Flex flexDirection="row" justify="center" align="center">
-              <motion.div
-                initial={{ opacity: 0, y: -1000 }}
-                animate={{
-                  opacity: 1, y: 0, x: 0,
-                  transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
-                }}
-              >
-                <IoLocationSharp fontSize={28} color="white"/>
-              </motion.div>
-              <Text c="white">{currentLocationText}</Text>
-            </Flex>
 
-            <Flex
-              component={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 1, delay: 1.4 } }}
-              padding={1}
-              direction="column"
-            >
-              <Anchor href={diploma}  target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
-                Bachelor of Computer Science, 2022
-              </Anchor>
-              <Anchor href={compTiaCert} target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
-                CompTIA A+ Certified
-              </Anchor>
-              <Anchor href={metaCert} target="_blank" rel="noreferrer" underline="hover" c="white" style={{ fontWeight: 600}}>
-                Meta Front End Developer Certified
-              </Anchor>
-            </Flex>
-          </Grid.Col>
-        </Grid>
+    <Flex direction="column" align="center" justify="center" h="100vh" bg="black">
+      <Box>
+        <Image src={profilePicture2} maw={1080} m="auto" display={{ base: "none", md: "initial"}} />
+        <Image src={profilePictureMobile} w="70%" m="auto" display={{ md: "none"}} />
+      </Box>
+
+      <Flex direction="column" align="center" h="25%">
+        <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
+        <Title c="white" order={2}>{currentIntroductionText}</Title>
+        <Flex justify="center" align="center">
+          <motion.div
+            initial={{ opacity: 0, y: -1000 }}
+            animate={{
+              opacity: 1, y: 0, x: 0,
+              transition: { delay: 2, type: "spring", damp: 350, mass: 0.2, stiffness: 250  }
+            }}
+          >
+            <IoLocationSharp fontSize={28} color="white"/>
+          </motion.div>
+          <Text c="white">{currentLocationText}</Text>
+        </Flex>
+      </Flex>
+    </Flex>
 
 
-
-
-    </Grid>
   )
 }
 
