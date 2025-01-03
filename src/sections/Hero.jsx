@@ -46,7 +46,7 @@ const Hero = () => {
         <Image src={profilePictureMobile} w="70%" maw={350} m="auto" radius={2} display={{ xs: "none"}} />
       </Flex>
 
-      <Flex direction="column" align="center" h="10%">
+      <Flex direction="column" align="center" h={125} mt={{ base: -50, sm: 0 }}>
         <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
         <Title c="white" order={2}>{currentIntroductionText}</Title>
         <Flex justify="center" align="center">
