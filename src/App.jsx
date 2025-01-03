@@ -19,7 +19,7 @@ const App = () => {
       <Header/>
 
       <AppShell.Main>
-        <Flex direction="column" gap={56} pos="relative">
+        <Flex direction="column" pos="relative">
           <Hero />
           <About />
           <Projects />

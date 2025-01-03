@@ -12,7 +12,7 @@ const About = () => {
 
 
   return (
-      <Flex direction="column" align="center" justify="space-around" h="89vh" pos="relative">
+      <Flex direction="column" align="center" justify="space-around" h="89vh" pos="relative" bg="white">
         <Box w={400} radius={3} px={16} mx="auto"  bg="white">
           <Title style={{ textAlign: "center" }}>About Me</Title>
           <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}} size="xl">
