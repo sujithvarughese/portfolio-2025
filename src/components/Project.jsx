@@ -61,12 +61,13 @@ const Project = ({
         isMobile={isMobile}
         openMobileAlert={openMobileAlert}
       />
-      <Paper shadow="xl" py={24} px={{ base: 0, sm: 24 }} maw={850} mx="auto">
+      <Paper
+        component={motion.div}
+        initial={cardVariants.offscreen}
+        whileInView={cardVariants.onscreen}
+        viewport={cardVariants.viewport}
+        shadow="xl" py={24} px={{ base: 0, sm: 24 }} maw={850} mx="auto">
         <Flex
-          component={motion.div}
-          initial={cardVariants.offscreen}
-          whileInView={cardVariants.onscreen}
-          viewport={cardVariants.viewport}
           direction={{ base: "column", sm: "row" }}
           style={{ overflow: "hidden" }}
           align="center"

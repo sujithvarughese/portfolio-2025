@@ -24,7 +24,7 @@ const About = () => {
           src={profilePicture}
           alt="Profile Picture"
           borderRadius={3}
-          w={420}
+          w={{base: 420, sm: 640 }}
         />
       </Flex>
 

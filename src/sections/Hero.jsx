@@ -47,10 +47,10 @@ const Hero = () => {
   return (
 
     <Flex direction="column" align="center" justify="space-around" h="89vh" bg="black">
-      <Box>
-        <Image src={profilePicture2} maw={1080} m="auto" display={{ base: "none", sm: "initial"}} />
-        <Image src={profilePictureMobile} w="70%" m="auto" display={{ sm: "none"}} />
-      </Box>
+      <Flex justify="center">
+        <Image src={profilePicture2} w="80%" maw={1400} m="auto" display={{ base: "none", sm: "initial"}} />
+        <Image src={profilePictureMobile} w="70%" maw={560} m="auto" display={{ sm: "none"}} />
+      </Flex>
 
       <Flex direction="column" align="center" h="25%">
         <Title c="white" style={{ fontSize: 42 }}>{currentNameText}</Title>
