@@ -15,10 +15,7 @@ const App = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <AppShell
-      header={{ height: 60 }}
-      m="auto"
-    >
+    <AppShell m="auto">
       <Header/>
 
       <AppShell.Main>

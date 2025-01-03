@@ -1,47 +1,23 @@
 import React from 'react'
-import {
-  ActionIcon,
-  Anchor,
-  AppShellHeader,
-  Box,
-  Burger,
-  Button,
-  Flex, Grid, Group, HoverCard,
-  Image,
-  Menu, Text, Title, Tooltip,
-  UnstyledButton
-} from '@mantine/core'
+import { ActionIcon, AppShellHeader, Burger, Flex, Group, HoverCard, Image, Text, Title, Tooltip, } from '@mantine/core'
 import svImage from "../assets/images/profile/sv.jpeg"
 import resume from "../assets/images/certificates/varughese_resume.pdf"
-import diploma from "../assets/images/certificates/diploma.png"
-import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
-import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
-import javascriptCert from "../assets/images/certificates/adv_javascript_cert.jpg"
-import reactNativeCert from "../assets/images/certificates/react_native_cert.jpg"
-import mernCert from "../assets/images/certificates/MERN_2024_cert.jpg"
-import accountingCert from "../assets/images/certificates/accounting_certificate.png"
-import businessManagementCert from "../assets/images/certificates/business_management_cert.png"
 const emailAddress = "sujith.varug@gmail.com"
 import linkedInIcon from '../assets/images/icons/linkedin-icon.svg';
 import githubIcon from "../assets/images/icons/github-mark-white.svg"
 import mailIcon from "../assets/images/icons/send-message.svg"
 import cvIcon from "../assets/images/icons/cv.png"
 import HoverHeader from './HoverHeader.jsx'
-import { IoLocationSharp } from 'react-icons/io5'
 
-const Header = ({ opened, toggle }) => {
-
-  const closeHoverHeader = () => {
-
-  }
+const Header = () => {
 
   return (
     <AppShellHeader>
       <Flex align="center" justify="space-between" p={12} h="100%">
         <Group>
-          <HoverCard width="98%" offset={15}>
+          <HoverCard width="98%" offset={13}>
             <HoverCard.Target>
-              <Burger size="sm"/>
+              <Burger  />
             </HoverCard.Target>
             <HoverCard.Dropdown>
               <HoverHeader />
