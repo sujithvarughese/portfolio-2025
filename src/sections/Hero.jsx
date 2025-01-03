@@ -48,8 +48,8 @@ const Hero = () => {
 
     <Flex direction="column" align="center" justify="space-evenly" h="88vh" bg="black">
       <Flex justify="center">
-        <Image src={profilePicture2} w="80%" maw={1400} m="auto" display={{ base: "none", sm: "initial"}} />
-        <Image src={profilePictureMobile} w="70%" maw={370} m="auto" display={{ sm: "none"}} />
+        <Image src={profilePicture2} w="80%" maw={1400} m="auto" display={{ base: "none", xs: "initial"}} />
+        <Image src={profilePictureMobile} w="70%" maw={350} m="auto" display={{ xs: "none"}} />
       </Flex>
 
       <Flex direction="column" align="center" h="25%">
