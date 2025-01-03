@@ -41,7 +41,7 @@ const Assistant = ({ opened, close }) => {
       position="right"
       title={<Title>AI Assistant</Title>}
       size="sm"
-      trapFocus={false}
+      removeScrollProps={{ allowPinchZoom: true }}
     >
       <Flex direction="column" gap={20}>
         <Box>
@@ -50,6 +50,7 @@ const Assistant = ({ opened, close }) => {
         </Box>
         <Box mx={12}>
           <Textarea
+            data-autofocus
             minRows={4}
             name="body"
             placeholder="Create Message"
@@ -57,6 +58,7 @@ const Assistant = ({ opened, close }) => {
             onChange={(e) => setQuery(e.currentTarget.value)}
           />
         </Box>
+
 
         <Flex justify="flex-end" mx={12}>
           <Button
@@ -67,6 +69,9 @@ const Assistant = ({ opened, close }) => {
           >Send
           </Button>
         </Flex>
+
+
+
       </Flex>
     </Drawer>
 
