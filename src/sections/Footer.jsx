@@ -10,8 +10,8 @@ import cvIcon from '../assets/images/icons/cv.png'
 
 const Footer = () => {
   return (
-    <Flex direction="column" align="center">
-      <Anchor href={`mailto:${emailAddress}`}>Let's Connect</Anchor>
+    <Flex direction="column" align="center" pb={84} gap={8}>
+      <Button component="a" href={`mailto:${emailAddress}`}>Let's Connect</Button>
       <Text>Get in touch! Feedback and inquiries are all welcome.</Text>
       <Flex className="social-icon" gap={6}>
         <Tooltip label="Resumé">

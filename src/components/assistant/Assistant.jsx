@@ -13,7 +13,7 @@ const Assistant = ({ opened, close }) => {
   const { response, error, loading, submitForm } = useSubmit()
   const [chat, setChat] = useState([{
     sender: "assistant",
-    message: 'Hello! I am your personal AI assistant to answer any questions you may have about Sujith. Try asking a question like "What are some of Sujith\'s recent projects?", or "What are some of Sujith\'s skills"?'
+    message: 'Hello! I am your personal AI assistant to answer any questions you may have about Sujith. Try asking a question like "What are some of Sujith\'s recent projects?", or "What programming languages is Sujith skilled in?"'
   }])
 
   const handleSubmit = async () => {
@@ -55,7 +55,13 @@ const Assistant = ({ opened, close }) => {
           onChange={(e) => setQuery(e.currentTarget.value)}
         />
         <Flex justify="flex-end">
-          <Button onClick={handleSubmit} loading={loading} rightSection={<IoIosSend size={20}/>}>Send</Button>
+          <Button
+            onClick={handleSubmit}
+            loading={loading}
+            loaderProps={{ type: 'dots' }}
+            rightSection={<IoIosSend size={20}/>}
+          >Send
+          </Button>
         </Flex>
       </Flex>
 
