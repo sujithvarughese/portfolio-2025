@@ -1,53 +1,77 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Response from './Response.jsx'
 import * as React from 'react'
 import useSubmit from '../../hooks/useSubmit.js'
-import { Box, Button, Container, Flex, Paper, Text, Textarea, Title } from '@mantine/core'
+import {
+  Box,
+  Button,
+  Container,
+  Drawer,
+  Flex,
+  Grid,
+  Menu,
+  Paper,
+  ScrollArea,
+  Text,
+  Textarea,
+  Title
+} from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IoIosSend } from "react-icons/io";
+import Chat from './Chat.jsx'
 
-const Assistant = () => {
+const Assistant = ({ opened, close }) => {
 
   const [query, setQuery] = useState("")
   const { response, error, loading, submitForm } = useSubmit()
-  const [opened, { open, close }] = useDisclosure(false);
+  const [chat, setChat] = useState([{
+    sender: "assistant",
+    message: 'Hello! I am your personal AI assistant to answer any questions you may have about Sujith. Try asking a question like "What are some of Sujith\'s recent projects?", or "What are some of Sujith\'s skills"?'
+  }])
 
-
-  const handleSubmit = () => {
-    open()
-    submitForm(query)
+  const handleSubmit = async () => {
+    if (!query) {
+      return
+    }
+    const message = { sender: "user", message: query }
+    setChat([message, ...chat])
+    setQuery("")
+    await submitForm(query)
   }
 
+  useEffect(() => {
+    console.log(chat)
+    if (!response || chat[0]?.sender === "assistant") {
+      return
+    }
+    const message = { sender: "assistant", message: response }
+    setChat([message, ...chat])
+  }, [response])
+
+
   return (
-    <>
-      <Container
-        w={{ base: "90%", sm: "80%"}}
-        sx={{ justifyContent: "center", margin: "auto"}}>
-        <Paper shadow="xl" p="md">
-            <Title style={{ textAlign: "center" }}>AI Assistant</Title>
-            <Textarea
-              fullWidth
-              id="outlined-controlled"
-              placeholder="What are Sujith's skills?"
-              label="Ask about me!"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              m={16}
-            />
-            <Flex justify="flex-end">
-              <Button
-                rightSection={<IoIosSend size="24px"/>}
-                sx={{ margin: 1 }}
-                onClick={handleSubmit}
-              >
-                Ask!
-              </Button>
-            </Flex>
-        </Paper>
-      </Container>
-      <Response opened={opened} close={close} response={response} loading={loading} error={error} />
-    </>
+    <Drawer
+      opened={opened} onClose={close}
+      position="right"
+      title={<Title>AI Assistant</Title>}
+    >
+      <Flex direction="column" gap={16}>
+        <Chat chat={chat} />
+        <Textarea
+          autosize
+          minRows={4}
+          name="body"
+          placeholder="Create Message"
+          value={query}
+          onChange={(e) => setQuery(e.currentTarget.value)}
+        />
+        <Flex justify="flex-end" py={12}>
+          <Button onClick={handleSubmit} loading={loading}>Send</Button>
+        </Flex>
+      </Flex>
+
+    </Drawer>
 
   )
 }
