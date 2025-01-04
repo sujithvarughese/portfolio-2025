@@ -22,18 +22,11 @@ import fitnessInstructionsIMG from "../assets/images/projects/simpler-fitness/in
 import realtyCoverIMG from "../assets/images/projects/realty-solutions/cover.png"
 import realtyCoverGIF from "../assets/images/projects/realty-solutions/cover.gif"
 import realtyCoverMP4 from "../assets/images/projects/realty-solutions/cover.mp4"
-//import fmrIMG from "../assets/images/projects/realty-solutions/fmr.png"
-//import messagesIMG from "../assets/images/projects/realty-solutions/messages.png"
-//import receiptsIMG from "../assets/images/projects/realty-solutions/receipts.png"
-//import mobileFinancesIMG from "../assets/images/projects/realty-solutions/mobile-finances.png"
-//import searchIMG from "../assets/images/projects/realty-solutions/search.png"
-
 import fmrIMG from "../assets/images/projects/realty-solutions/lw-fmr.png"
 import messagesIMG from "../assets/images/projects/realty-solutions/lw-messages.png"
 import galleryModeIMG from "../assets/images/projects/realty-solutions/lw-gallery.png"
 import listModeIMG from "../assets/images/projects/realty-solutions/lw-listmode.png"
 import dashboardIMG from "../assets/images/projects/realty-solutions/lw-dashboard.png"
-
 
 import onTheBooksCoverIMG from "../assets/images/projects/on-the-books/cover.jpeg"
 import onTheBooksCoverGIF from "../assets/images/projects/on-the-books/cover.gif"
@@ -46,8 +39,6 @@ import bookSearchIMG from "../assets/images/projects/on-the-books/search.png"
 import blackjackCoverIMG from "../assets/images/projects/blackjack/cover.jpeg"
 import blackjackCoverGIF from "../assets/images/projects/blackjack/cover.gif"
 import blackjackCoverMP4 from "../assets/images/projects/blackjack/cover.mp4"
-import blackjackMobileDoubleIMG from "../assets/images/projects/blackjack/mobile-double.png"
-import blackjackPlayerWinIMG from "../assets/images/projects/blackjack/player-win.png"
 import blackjackMobileIMG from "../assets/images/projects/blackjack/bj-mobile2.png"
 import blackjackDesktopIMG from "../assets/images/projects/blackjack/bj-desktop.png"
 
@@ -64,13 +55,13 @@ export const projects = [
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
-		heading: "Real estate app to help you manage finances. APIs to search nationwide housing listings and market rental rates, along with a full-featured messaging client.",
-		description: "Through my experience in property management, I realized the lack of an efficient system for managing payments and handling tenant-owner communication.\n\nWith LeaseWise, you can calculate your profits/losses, view recent and upcoming payments, and get nationwide listings and rental rates in real time.",
+		heading: "Streamline your real estate management: Track finances, explore nationwide housing listings and rental market rates, and connect seamlessly with a built-in messaging client.",
+		description: "During my time in property management, I recognized the need for a more efficient system to manage payments and facilitate tenant-owner communication.\n\nLeaseWise simplifies property management by allowing you to track profits and losses, monitor recent and upcoming payments, and access real-time nationwide listings and rental rates.",
 		captions: [
-			"Uses React Router, Redux Toolkit, reducers, and Context API for navigation and state management.",
-			"Separate user roles for tenants and managers authenticated using JSON web tokens securely attached to signed HTTP cookies.",
-			"Full MLS listing search and fair market rental rates using APIs from HUD.gov API and Realty-in-US.",
-			"Data securely stored and retrieved using MongoDS with mongoose and ExpressJS."
+			"Built with React Router, Redux Toolkit, reducers, and Context API for seamless navigation and efficient state management.",
+			"Supports distinct user roles for tenants and managers, with secure authentication via JSON Web Tokens embedded in signed HTTP cookies.",
+			"Comprehensive MLS listing search and fair market rental rates powered by APIs from HUD.gov and Realty-in-US.",
+			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
 		],
 		images : [dashboardIMG, galleryModeIMG, messagesIMG, listModeIMG, fmrIMG],
 		desktop: rsDesktop,
@@ -87,8 +78,8 @@ export const projects = [
 		coverImage: simplerFitnessCoverIMG,
 		coverVideo: simplerFitnessCoverMP4,
 		coverGif: simplerFitnessCoverGIF,
-		heading: "This AI-powered mobile exercise app uses OpenAI to creates detailed customized routines based on your profile and your available equipment.",
-		description: "Get detailed information on thousands of workouts and use artificial intelligence to create personalized workouts, whether you're working out from home or the gym.",
+		heading: "Personalized AI-Powered Fitness: Custom Workout Routines Tailored to You and Your Equipment Using OpenAI.",
+		description: "Explore thousands of workouts and leverage AI to create personalized routines tailored to your fitness goals, whether you're at home or in the gym.",
 		captions: [
 			"Uses React Router, reducers, and Context API for navigation and state management.",
 			"Uses OpenAI chat completion API which creates custom prompts based on your personal information.",
