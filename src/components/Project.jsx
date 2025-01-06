@@ -10,7 +10,7 @@ import { useDisclosure } from '@mantine/hooks'
 const cardVariants = {
   offscreen: {
     y: 100,
-    scale: 0.7,
+    scale: 0.8,
     opacity: 0.2
   },
   onscreen: {
@@ -66,7 +66,8 @@ const Project = ({
         initial={cardVariants.offscreen}
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
-        shadow="xl" py={24} px={{ base: 12, sm: 24 }} maw={850} mx="auto">
+        whileHover={{ scale: 1.05 }}
+        shadow="xl" py={24} px={{ base: 12, sm: 36 }} maw={850} mx="auto">
         <Flex
           direction={{ base: "column", sm: "row" }}
           style={{ overflow: "hidden" }}
@@ -82,7 +83,7 @@ const Project = ({
           >
             <Image
               src={isHovering ? coverImage : coverGif} alt="project"
-              w={{ base: 240, sm: 380 }}
+              w={{ base: 240, sm: 340 }}
               style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
             />
           </UnstyledButton>
