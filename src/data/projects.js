@@ -99,7 +99,7 @@ export const projects = [
 		coverImage: blackjackCoverIMG,
 		coverVideo: blackjackCoverMP4,
 		coverGif: blackjackCoverGIF,
-		heading: "Learn perfect strategy with hints and live feedback after every move, along with real-time ROI calculations.",
+		heading: "Master your strategy with live move-by-move feedback, helpful hints, and real-time ROI calculations.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
 		captions: [
 			"Customizable settings- Choose number of decks, blackjack payouts, your bankroll, number of splits allowed, and more.",
@@ -121,7 +121,7 @@ export const projects = [
 		coverImage: medscopeCoverIMG,
 		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
-		heading: "Tired of getting medical advice from the resident reddit doctor? Just plug in your symptoms and and basic info, and AI will lay out your best treatment options.",
+		heading: "Say goodbye to unreliable online advice. Simply enter your symptoms and basic information, and let AI provide clear and accurate treatment options.",
 		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nAPI from DrugBank to further improve accuracy and detail, along with added features such as drug interactions. ",
 		captions: [
 			"Built with React Native, along with Expo for App Store publishing",
@@ -141,7 +141,7 @@ export const projects = [
 		coverImage: bookstaxCoverIMG,
 		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
-		heading: "A reading app to keep track of your past and current books, while helping you discover new books using the New York Times Best Sellers API.",
+		heading: "Track your reading journey with ease—log past and current books while discovering new favorites through the New York Times Best Sellers API.",
 		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
 		captions: [
 			"Integration with New York Times Best Sellers API and OpenLibrary's search API",
@@ -161,7 +161,7 @@ export const projects = [
 		coverImage: onTheBooksCoverIMG,
 		coverVideo: onTheBooksCoverMP4,
 		coverGif: onTheBooksCoverGIF,
-		heading: "The original reading application built early in my development journey. This web app is designed to help you organize, discover new books, and take notes.",
+		heading: "My first reading application, developed early in my journey, is a web app designed to help you organize your library, discover new books with the OpenLibrary API, and take notes effortlessly.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality.",
 		captions: [
 			"OpenLibrary API integration to search books by genre and get previews and recommendations.",
