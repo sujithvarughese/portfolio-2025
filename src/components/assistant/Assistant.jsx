@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import useSubmit from '../../hooks/useSubmit.js'
 import { Box, Button, Drawer, Flex, Textarea, Title } from '@mantine/core'
-import { useDisclosure } from '@mantine/hooks'
 import { IoIosSend } from "react-icons/io";
 import Message from './Message.jsx'
-import * as React from 'react'
 import LoadingMessage from './LoadingMessage.jsx'
 
 const Assistant = ({ opened, close }) => {
@@ -64,14 +62,12 @@ const Assistant = ({ opened, close }) => {
           <Button
             onClick={handleSubmit}
             loading={loading}
+            variant="gradient"
             loaderProps={{ type: 'dots' }}
             rightSection={<IoIosSend size={20}/>}
           >Send
           </Button>
         </Flex>
-
-
-
       </Flex>
     </Drawer>
 

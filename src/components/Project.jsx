@@ -4,8 +4,9 @@ import { motion } from 'motion/react'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { Anchor, Avatar, Box, Button, Flex, Image, Paper, Text, Title, Tooltip, UnstyledButton } from '@mantine/core'
+import { Avatar,  Button, Flex, Image, Paper, Text, Title, Tooltip, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
+import { LiaGithub, LiaRocketSolid } from "react-icons/lia";
 
 const cardVariants = {
   offscreen: {
@@ -97,8 +98,17 @@ const Project = ({
             </Flex>
 
             <Flex gap={12} justify={{ base: "center", sm: "flex-start" }}>
-              <Button component="a" variant="light" size="lg" href={github} target="_blank" rel="noreferrer">Github</Button>
-              {isMobile ? <Button variant="light" size="lg" onClick={openMobileAlert}>Demo</Button> : <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer">Demo</Button>}
+              <Button
+                component="a"
+                variant="light"
+                size="lg"
+                href={github}
+                target="_blank"
+                rel="noreferrer"
+                leftSection={<LiaGithub size={24} />}
+              >Github
+              </Button>
+              {isMobile ? <Button variant="light" size="lg" onClick={openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button> : <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>}
             </Flex>
           </Flex>
 
