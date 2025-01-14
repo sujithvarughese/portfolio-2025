@@ -42,6 +42,12 @@ import blackjackCoverMP4 from "../assets/images/projects/blackjack/cover.mp4"
 import blackjackMobileIMG from "../assets/images/projects/blackjack/bj-mobile2.png"
 import blackjackDesktopIMG from "../assets/images/projects/blackjack/bj-desktop.png"
 
+import triviaCoverIMG from "../assets/images/projects/trivia/cover.jpeg"
+import triviaCoverGIF from "../assets/images/projects/trivia/cover.gif"
+import trivia1IMG from "../assets/images/projects/trivia/ss1.png"
+import trivia2IMG from "../assets/images/projects/trivia/ss2.png"
+import trivia3IMG from "../assets/images/projects/trivia/ss3.png"
+
 import rsDesktop from "../assets/images/projects/realty-solutions/home-desktop.png"
 import rsMobile from "../assets/images/projects/realty-solutions/home-mobile.png"
 import otbDesktop from "../assets/images/projects/on-the-books/on-the-books-desktop.png"
@@ -93,6 +99,25 @@ export const projects = [
 		featured: true,
 		isMobile: false,
 		width: "20%"
+	},
+	{
+		title: "Ultimate Trivia",
+		coverImage: triviaCoverIMG,
+		coverGif: triviaCoverGIF,
+		heading: "Your ultimate trivia challenge. Challenge Your Knowledge, One Question at a Time!",
+		description: "Test your knowledge and challenge your friends with fun and engaging trivia questions across a variety of topics!\n\n",
+		captions: [
+			"Utilizes Redux Toolkit for efficient state management and score tracking.",
+			"Features thousands of questions across customized categories using the Open Trivia Database.",
+			"Designed with Mantine UI for a sleek and modern user interface.",
+		],
+		images: [trivia1IMG, trivia2IMG, trivia3IMG],
+		link: 'https://ultimate-trivia.netlify.app',
+		github: 'https://github.com/sujithvarughese/ultimate-trivia',
+		tech: ["JavaScript", "React", "HTML", "CSS"],
+		featured: false,
+		isMobile: false,
+		width: "40%"
 	},
 	{
 		title: "Beat Blackjack",
