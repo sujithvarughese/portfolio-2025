@@ -101,15 +101,15 @@ export const projects = [
 		width: "20%"
 	},
 	{
-		title: "Ultimate Trivia",
+		title: "Trivia Night AI",
 		coverImage: triviaCoverIMG,
 		coverGif: triviaCoverGIF,
-		heading: "Your ultimate trivia challenge. Challenge Your Knowledge, One Question at a Time!",
+		heading: "Challenge Your Knowledge, while getting AI-powered explanations to learn the \"why\" behind every answer!",
 		description: "Test your knowledge and challenge your friends with fun and engaging trivia questions across a variety of topics!\n\n",
 		captions: [
 			"Utilizes Redux Toolkit for efficient state management and score tracking.",
 			"Features thousands of questions across customized categories using the Open Trivia Database.",
-			"Designed with Mantine UI for a sleek and modern user interface.",
+			"Uses OpenAI Assistants API to generate explanations for every answer.",
 		],
 		images: [trivia1IMG, trivia2IMG, trivia3IMG],
 		link: 'https://ultimate-trivia.netlify.app',

@@ -4,9 +4,10 @@ import { motion } from 'motion/react'
 import ProjectDrawer from './ProjectDrawer.jsx'
 import { useState } from 'react'
 import MobilePopUp from './MobilePopUp.jsx'
-import { Avatar,  Button, Flex, Image, Paper, Text, Title, Tooltip, UnstyledButton } from '@mantine/core'
+import {Anchor, Avatar, Button, Flex, Image, Paper, Text, Title, Tooltip, UnstyledButton} from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { LiaGithub, LiaRocketSolid } from "react-icons/lia";
+import { FaAppStore } from "react-icons/fa";
 
 const cardVariants = {
   offscreen: {
@@ -85,6 +86,7 @@ const Project = ({
             <Image
               src={isHovering ? coverImage : coverGif} alt="project"
               w={{ base: 240, sm: 340 }}
+              mah={{ base: 240, sm: 340 }}
               style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
             />
           </UnstyledButton>
@@ -108,7 +110,21 @@ const Project = ({
                 leftSection={<LiaGithub size={24} />}
               >Github
               </Button>
-              {isMobile ? <Button variant="light" size="lg" onClick={openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button> : <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>}
+              {isMobile ?
+              <Button variant="light" size="lg" onClick={openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button>
+              :
+              <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>
+              }
+              {title === "Trivia Night AI" &&
+              <Button
+                component={Anchor}
+                href="https://apps.apple.com/us/app/trivia-night-ai/id6741895843"
+                variant="light" size="lg"
+                target="_blank"
+                leftSection={<FaAppStore size={24}/>}
+              >App Store
+              </Button>
+              }
             </Flex>
           </Flex>
 
