@@ -74,7 +74,7 @@ export const projects = [
 		mobile: rsMobile,
 		link: 'https://lease-wise.com',
 		github: 'https://github.com/sujithvarughese/leasewise-api',
-		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
 		width: "50%"
@@ -114,7 +114,7 @@ export const projects = [
 		images: [trivia1IMG, trivia2IMG, trivia3IMG],
 		link: 'https://ultimate-trivia.netlify.app',
 		github: 'https://github.com/sujithvarughese/ultimate-trivia',
-		tech: ["JavaScript", "React", "HTML", "CSS"],
+		tech: ["TypeScript", "React", "Expo", "OpenAI", "HTML", "CSS"],
 		featured: false,
 		isMobile: false,
 		width: "40%"

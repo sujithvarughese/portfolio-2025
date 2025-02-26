@@ -1,12 +1,14 @@
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaReact, FaNode, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { TbApiApp, TbBinaryTree, TbFileTypeSql } from 'react-icons/tb'
-import { SiHtml5, SiMui, SiCss3, SiBootstrap, SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents, SiExpo, SiFirebase, SiGraphql, SiJest, SiPostman, SiTailwindcss, SiJetbrains, SiGoogleanalytics, SiPython } from 'react-icons/si'
+import { SiHtml5, SiMui, SiCss3, SiBootstrap, SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents, SiExpo, SiFirebase, SiGraphql, SiJest, SiPostman, SiTailwindcss, SiJetbrains, SiGoogleanalytics, SiPython, SiMantine } from 'react-icons/si'
 import { DiScrum } from 'react-icons/di'
 import { MdDns } from 'react-icons/md'
 import { FaAws, FaGitAlt, FaJava } from 'react-icons/fa'
 import { IoIosRocket } from 'react-icons/io'
 import { VscVscode } from 'react-icons/vsc'
+import { BiLogoTypescript } from "react-icons/bi";
+
 import { Badge, Flex } from '@mantine/core'
 
 
@@ -30,7 +32,8 @@ const IconPill = ({ name, variant, styles }) => {
 export default IconPill
 
 export const logos = {
-  "JavaScript": <RiJavascriptFill size="28px" />,
+  "JavaScript": <RiJavascriptFill size="32px" />,
+  "TypeScript": <BiLogoTypescript size="32px" />,
   "Python": <SiPython size="28px" />,
   "Java": <FaJava size="28px" />,
   "OpenAI": <SiOpenai size="28px" />,
@@ -50,6 +53,7 @@ export const logos = {
   "HTML": <SiHtml5 size="28px" />,
   "CSS": <SiCss3 size="28px" />,
   "Material UI": <SiMui size="28px" />,
+  "Mantine UI": <SiMantine size="28px" />,
   "ChakraUI": <SiChakraui size="28px" />,
   "Styled Components": <SiStyledcomponents size="28px" />,
   "Bootstrap": <SiBootstrap size="28px" />,
