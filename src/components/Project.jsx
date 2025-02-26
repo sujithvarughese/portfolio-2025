@@ -99,7 +99,7 @@ const Project = ({
               {tech.map((item, index) => <Tooltip label={item}><Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}
             </Flex>
 
-            <Flex gap={12} justify={{ base: "center", sm: "flex-start" }}>
+            <Flex gap={12} justify={{ base: "center", sm: "flex-start" }} wrap="wrap">
               <Button
                 component="a"
                 variant="light"

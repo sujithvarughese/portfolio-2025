@@ -93,7 +93,7 @@ const HoverHeader = () => {
           </Box>
         </Flex>
 
-        <Box>
+        <Box display={{ base: "none", sm: "initial" }}>
           <Title order={2}>Projects</Title>
           <Grid>
             {projects.map(project =>
