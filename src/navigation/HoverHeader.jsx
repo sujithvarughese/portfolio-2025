@@ -37,7 +37,7 @@ const HoverHeader = () => {
               <Anchor href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</Anchor>
             </Flex>
           </Box>
-
+          {/*
           <Box>
             <Title order={2}>Projects</Title>
             <Grid maw={{ base: 220, sm: 340 }}>
@@ -52,36 +52,7 @@ const HoverHeader = () => {
               )}
             </Grid>
           </Box>
-
-          <Box>
-            <Title order={2}>Links</Title>
-            <Flex direction="column">
-              <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
-              <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
-              <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
-            </Flex>
-            <Button my={12} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
-          </Box>
-
-        </Flex>
-
-
-      <Flex direction="column" justify="space-around" w="100%" display={{ sm: "none" }}>
-
-        <Flex justify="space-between">
-          <Box>
-            <Title order={2}>Certificates</Title>
-            <Flex direction="column">
-              <Anchor href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</Anchor>
-              <Anchor href={compTiaCert} target="_blank" rel="noreferrer">CompTIA A+</Anchor>
-              <Anchor href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</Anchor>
-              <Anchor href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</Anchor>
-              <Anchor href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</Anchor>
-              <Anchor href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</Anchor>
-              <Anchor href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</Anchor>
-              <Anchor href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</Anchor>
-            </Flex>
-          </Box>
+          */}
           <Box>
             <Title order={2}>Links</Title>
             <Flex direction="column">
@@ -93,26 +64,31 @@ const HoverHeader = () => {
           </Box>
         </Flex>
 
-        <Box display={{ base: "none", sm: "initial" }}>
-          <Title order={2}>Projects</Title>
-          <Grid>
-            {projects.map(project =>
-              <Grid.Col key={project.title} span={4}>
-                <Indicator label={project.title} position="bottom-center" offset={6} size="lg">
-                  <Tooltip label={project.heading} multiline>
-                    <ActionIcon size="110px" component="a" href={project.link} target="_blank" rel="noreferrer"><Image src={project.coverImage} /></ActionIcon>
-                  </Tooltip>
-                </Indicator>
-              </Grid.Col>
-            )}
-          </Grid>
+
+      <Flex justify="space-around" w="100%" display={{ sm: "none" }}>
+        <Box>
+          <Title order={2}>Certificates</Title>
+          <Flex direction="column">
+            <Anchor href={diploma} target="_blank" rel="noreferrer">Bachelor's Diploma</Anchor>
+            <Anchor href={compTiaCert} target="_blank" rel="noreferrer">CompTIA A+</Anchor>
+            <Anchor href={metaCert} target="_blank" rel="noreferrer">Meta Front End Developer</Anchor>
+            <Anchor href={accountingCert} target="_blank" rel="noreferrer">Accounting Technology</Anchor>
+            <Anchor href={businessManagementCert} target="_blank" rel="noreferrer">Business Management</Anchor>
+            <Anchor href={javascriptCert} target="_blank" rel="noreferrer">Advanced Javascript</Anchor>
+            <Anchor href={reactNativeCert} target="_blank" rel="noreferrer">React Native 2024</Anchor>
+            <Anchor href={mernCert} target="_blank" rel="noreferrer">MERN Stack 2024</Anchor>
+          </Flex>
         </Box>
-
-
+        <Box>
+          <Title order={2}>Links</Title>
+          <Flex direction="column">
+            <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
+            <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
+            <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
+          </Flex>
+          <Button my={12} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
+        </Box>
       </Flex>
-
-
-
     </Flex>
   )
 }
