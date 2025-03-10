@@ -57,6 +57,26 @@ import bjMobile from "../assets/images/projects/blackjack/bj-mobile.png"
 
 export const projects = [
 	{
+		title: "MedScope",
+		coverImage: medscopeCoverIMG,
+		coverVideo: medscopeCoverMP4,
+		coverGif: medscopeCoverGIF,
+		heading: "A comprehensive health and medical information app that allows users to look up detailed drug and medical condition information, receive personalized health assessments, identify possible conditions based on symptoms, and calculate BMI along with other useful health metrics.",
+		description: "Enter your symptoms, along with your age and gender. With the help of AI, you will get several possible conditions and treatment options.\n\nAPI from DrugBank to further improve accuracy and detail, along with added features such as drug interactions. ",
+		captions: [
+			"Built in TypeScript in both React and React Native",
+			"Search any drug or health condition with autocompletion using National Institute of Health's RX-Terms API.",
+			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
+		],
+		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
+		link: 'https://medscope-info.pages.dev',
+		github: 'https://github.com/sujithvarughese/medscope-info',
+		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
+		featured: false,
+		isMobile: false,
+		width: "50%"
+	},
+	{
 		title: "LeaseWise",
 		coverImage: realtyCoverIMG,
 		coverVideo: realtyCoverMP4,
@@ -140,26 +160,6 @@ export const projects = [
 		featured: false,
 		isMobile: false,
 		width: "40%"
-	},
-	{
-		title: "MedScope (Mobile App)",
-		coverImage: medscopeCoverIMG,
-		coverVideo: medscopeCoverMP4,
-		coverGif: medscopeCoverGIF,
-		heading: "Say goodbye to unreliable online advice. Simply enter your symptoms and basic information, and let AI provide clear and accurate treatment options.",
-		description: "Enter up to five symptoms, along with your age and sex. With the help of AI, you will get several options of reliable treatment, sorted in order of effectiveness.\n\nAPI from DrugBank to further improve accuracy and detail, along with added features such as drug interactions. ",
-		captions: [
-			"Built with React Native, along with Expo for App Store publishing",
-			"Search through drug list with autocompletion using National Institute of Health's RX-Terms API.",
-			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
-		],
-		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
-		link: 'https://medscope.pages.dev/',
-		github: 'https://github.com/sujithvarughese/medscope',
-		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
-		featured: false,
-		isMobile: true,
-		width: "50%"
 	},
 	{
 		title: "BookStax (Mobile App)",
