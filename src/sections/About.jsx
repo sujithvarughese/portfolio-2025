@@ -1,7 +1,7 @@
 
 import { aboutMeUpdated } from '../data/data.js'
 import profilePicture from "../assets/images/profile/hera.png"
-import profilePicture2 from "../assets/images/profile/profile.png"
+import profilePicture2 from "../assets/images/profile/profile-1.png"
 
 import { motion } from 'motion/react'
 import santaHatImg from "../assets/images/backgrounds/santa-hat.png"
