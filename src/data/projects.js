@@ -64,7 +64,7 @@ export const projects = [
 		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
 		link: 'https://medscope.app',
 		github: 'https://github.com/sujithvarughese/medscope-info',
-		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
+		tech: ["TypeScript", "OpenAI", "React Native", "Expo", "NodeJS", "HTML", "CSS"],
 		featured: false,
 		isMobile: false,
 		width: "50%"
