@@ -1,27 +1,23 @@
 import medscopeCoverIMG from "../assets/images/projects/medscope/cover.jpeg"
 import medscopeCoverGIF from "../assets/images/projects/medscope/cover.gif"
-import medscopeCoverMP4 from "../assets/images/projects/medscope/cover.mp4"
 import medscopeHomeIMG from "../assets/images/projects/medscope/screenshot-home.png"
 import medscopeProfileIMG from "../assets/images/projects/medscope/screenshot-profile.png"
 import medscopeDrugIMG from "../assets/images/projects/medscope/screenshot-drug.png"
 
 import bookstaxCoverIMG from "../assets/images/projects/bookstax/cover.png"
 import bookstaxCoverGIF from "../assets/images/projects/bookstax/cover.gif"
-import bookstaxCoverMP4 from "../assets/images/projects/bookstax/cover.mp4"
 import bookstaxHomeIMG from "../assets/images/projects/bookstax/screenshot-home.png"
 import bookstaxLibraryIMG from "../assets/images/projects/bookstax/screenshot-library.png"
 import bookstaxDiscoverIMG from "../assets/images/projects/bookstax/screenshot-discover.png"
 
 import simplerFitnessCoverIMG from "../assets/images/projects/simpler-fitness/cover.png"
 import simplerFitnessCoverGIF from "../assets/images/projects/simpler-fitness/cover.gif"
-import simplerFitnessCoverMP4 from "../assets/images/projects/simpler-fitness/cover.mp4"
 import fitnessBrowseIMG from "../assets/images/projects/simpler-fitness/browse.png"
 import fitnessSearchIMG from "../assets/images/projects/simpler-fitness/search.png"
 import fitnessInstructionsIMG from "../assets/images/projects/simpler-fitness/instructions.png"
 
 import realtyCoverIMG from "../assets/images/projects/realty-solutions/cover.png"
 import realtyCoverGIF from "../assets/images/projects/realty-solutions/cover.gif"
-import realtyCoverMP4 from "../assets/images/projects/realty-solutions/cover.mp4"
 import fmrIMG from "../assets/images/projects/realty-solutions/lw-fmr.png"
 import messagesIMG from "../assets/images/projects/realty-solutions/lw-messages.png"
 import galleryModeIMG from "../assets/images/projects/realty-solutions/lw-gallery.png"
@@ -30,7 +26,6 @@ import dashboardIMG from "../assets/images/projects/realty-solutions/lw-dashboar
 
 import onTheBooksCoverIMG from "../assets/images/projects/on-the-books/cover.jpeg"
 import onTheBooksCoverGIF from "../assets/images/projects/on-the-books/cover.gif"
-import onTheBooksCoverMP4 from "../assets/images/projects/on-the-books/cover.mp4"
 import bookDiscoverIMG from "../assets/images/projects/on-the-books/discover.png"
 import notebookIMG from "../assets/images/projects/on-the-books/notebook.png"
 import bookPreviewIMG from "../assets/images/projects/on-the-books/preview.png"
@@ -38,9 +33,8 @@ import bookSearchIMG from "../assets/images/projects/on-the-books/search.png"
 
 import blackjackCoverIMG from "../assets/images/projects/blackjack/cover.jpeg"
 import blackjackCoverGIF from "../assets/images/projects/blackjack/cover.gif"
-import blackjackCoverMP4 from "../assets/images/projects/blackjack/cover.mp4"
 import blackjackMobileIMG from "../assets/images/projects/blackjack/bj-mobile2.png"
-import blackjackDesktopIMG from "../assets/images/projects/blackjack/bj-desktop.png"
+import blackjackDesktopIMG from "../assets/images/projects/blackjack/bj-desktop.jpg"
 
 import triviaCoverIMG from "../assets/images/projects/trivia/cover.jpeg"
 import triviaCoverGIF from "../assets/images/projects/trivia/cover.gif"
@@ -52,24 +46,23 @@ import rsDesktop from "../assets/images/projects/realty-solutions/home-desktop.p
 import rsMobile from "../assets/images/projects/realty-solutions/home-mobile.png"
 import otbDesktop from "../assets/images/projects/on-the-books/on-the-books-desktop.png"
 import otbMobile from "../assets/images/projects/on-the-books/on-the-books-mobile.png"
-import bjDesktop from "../assets/images/projects/blackjack/bj-desktop.png"
+import bjDesktop from "../assets/images/projects/blackjack/bj-desktop.jpg"
 import bjMobile from "../assets/images/projects/blackjack/bj-mobile.png"
 
 export const projects = [
 	{
 		title: "MedScope",
 		coverImage: medscopeCoverIMG,
-		coverVideo: medscopeCoverMP4,
 		coverGif: medscopeCoverGIF,
 		heading: "A comprehensive health and medical information app that allows users to look up detailed drug and medical condition information, receive personalized health assessments, identify possible conditions based on symptoms, and calculate BMI along with other useful health metrics.",
-		description: "Enter your symptoms, along with your age and gender. With the help of AI, you will get several possible conditions and treatment options.\n\nAPI from DrugBank to further improve accuracy and detail, along with added features such as drug interactions. ",
+		description: "Tired of relying on medical advice from internet strangers? Simply enter your symptoms and basic profile details, and let AI provide you with potential conditions and treatment options.",
 		captions: [
-			"Built in TypeScript in both React and React Native",
+			"Built in TypeScript in both React and React Native with React Router, Redux Toolkit for seamless navigation and efficient state management.",
 			"Search any drug or health condition with autocompletion using National Institute of Health's RX-Terms API.",
 			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
 		],
 		images: [medscopeHomeIMG, medscopeDrugIMG, medscopeProfileIMG],
-		link: 'https://medscope-info.pages.dev',
+		link: 'https://medscope.app',
 		github: 'https://github.com/sujithvarughese/medscope-info',
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: false,
@@ -79,12 +72,10 @@ export const projects = [
 	{
 		title: "LeaseWise",
 		coverImage: realtyCoverIMG,
-		coverVideo: realtyCoverMP4,
 		coverGif: realtyCoverGIF,
 		heading: "Streamline your real estate management: Track finances, explore nationwide housing listings and rental market rates, and connect seamlessly with a built-in messaging client.",
-		description: "During my time in property management, I recognized the need for a more efficient system to manage payments and facilitate tenant-owner communication.\n\nLeaseWise simplifies property management by allowing you to track profits and losses, monitor recent and upcoming payments, and access real-time nationwide listings and rental rates.",
+		description: "While working in real estate, I recognized the need for a more efficient system to manage payments and facilitate tenant-owner communication.\n\nLeaseWise simplifies property management by allowing you to track profits and losses, monitor recent and upcoming payments, and access real-time nationwide listings and rental rates.",
 		captions: [
-			"Built with React Router, Redux Toolkit, reducers, and Context API for seamless navigation and efficient state management.",
 			"Supports distinct user roles for tenants and managers, with secure authentication via JSON Web Tokens embedded in signed HTTP cookies.",
 			"Comprehensive MLS listing search and fair market rental rates powered by APIs from HUD.gov and Realty-in-US.",
 			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
@@ -102,7 +93,6 @@ export const projects = [
 	{
 		title: "Simpler Fitness",
 		coverImage: simplerFitnessCoverIMG,
-		coverVideo: simplerFitnessCoverMP4,
 		coverGif: simplerFitnessCoverGIF,
 		heading: "Personalized AI-Powered Fitness: Custom Workout Routines Tailored to You and Your Equipment Using OpenAI.",
 		description: "Explore thousands of workouts and leverage AI to create personalized routines tailored to your fitness goals, whether you're at home or in the gym.",
@@ -125,11 +115,11 @@ export const projects = [
 		coverImage: triviaCoverIMG,
 		coverGif: triviaCoverGIF,
 		heading: "Challenge Your Knowledge, while getting AI-powered explanations to learn the \"why\" behind every answer!",
-		description: "Test your knowledge and challenge your friends with fun and engaging trivia questions across a variety of topics!\n\n",
+		description: "Test your knowledge and challenge your friends with fun and engaging trivia questions across a variety of topics, with detailed explanations for the answers!\n\n",
 		captions: [
 			"Utilizes Redux Toolkit for efficient state management and score tracking.",
 			"Features thousands of questions across customized categories using the Open Trivia Database.",
-			"Uses OpenAI Assistants API to generate explanations for every answer.",
+			"Uses OpenAI Chat Completions API to generate explanations for every answer.",
 		],
 		images: [trivia1IMG, trivia2IMG, trivia3IMG],
 		link: 'https://ultimate-trivia.netlify.app',
@@ -142,7 +132,6 @@ export const projects = [
 	{
 		title: "Beat Blackjack",
 		coverImage: blackjackCoverIMG,
-		coverVideo: blackjackCoverMP4,
 		coverGif: blackjackCoverGIF,
 		heading: "Master your strategy with live move-by-move feedback, helpful hints, and real-time ROI calculations.",
 		description: "Beat Blackjack is designed to teach blackjack strategy while having fun trying to beat the house. Use the optional hint feature at any time to get the correct book play, or choose to get live feedback after every move.\n\n",
@@ -164,7 +153,6 @@ export const projects = [
 	{
 		title: "BookStax (Mobile App)",
 		coverImage: bookstaxCoverIMG,
-		coverVideo: bookstaxCoverMP4,
 		coverGif: bookstaxCoverGIF,
 		heading: "Track your reading journey with ease—log past and current books while discovering new favorites through the New York Times Best Sellers API.",
 		description: "While most current reading apps are simply online stores to buy e-books, this app is geared toward organization and efficient note-taking, while still having the ability to discover and purchase books through Apple and Amazon.",
@@ -184,7 +172,6 @@ export const projects = [
 	{
 		title: "On the Books",
 		coverImage: onTheBooksCoverIMG,
-		coverVideo: onTheBooksCoverMP4,
 		coverGif: onTheBooksCoverGIF,
 		heading: "My first reading application, developed early in my journey, is a web app designed to help you organize your library, discover new books with the OpenLibrary API, and take notes effortlessly.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality.",

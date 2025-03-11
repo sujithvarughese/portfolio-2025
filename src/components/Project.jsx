@@ -69,7 +69,7 @@ const Project = ({
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
         whileHover={{ scale: 1.05 }}
-        shadow="xl" py={24} px={{ base: 12, sm: 36 }} maw={850} mx="auto">
+        shadow="xl" py={24} radius={8} px={{ base: 12, sm: 36 }} maw={850} mx="auto">
         <Flex
           direction={{ base: "column", sm: "row" }}
           style={{ overflow: "hidden" }}
@@ -85,9 +85,17 @@ const Project = ({
           >
             <Image
               src={isHovering ? coverImage : coverGif} alt="project"
+              display={{ base: "none", sm: "initial" }}
               w={{ base: 240, sm: 340 }}
               mah={{ base: 240, sm: 340 }}
               style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
+            />
+            <Image
+                src={coverImage} alt="project"
+                display={{ sm: "none" }}
+                w={{ base: 240, sm: 340 }}
+                mah={{ base: 240, sm: 340 }}
+                style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
             />
           </UnstyledButton>
 
@@ -96,7 +104,7 @@ const Project = ({
             <Text size="lg">{heading}</Text>
 
             <Flex gap={4} justify={{ base: "center", sm: "flex-start" }}>
-              {tech.map((item, index) => <Tooltip label={item}><Avatar key={index} size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}
+              {tech.map((item, index) => <Tooltip label={item} key={index} ><Avatar size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}
             </Flex>
 
             <Flex gap={12} justify={{ base: "center", sm: "flex-start" }} wrap="wrap">

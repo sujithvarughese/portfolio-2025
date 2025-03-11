@@ -1,6 +1,5 @@
-import { Avatar, Box, Loader, LoadingOverlay, Paper, Text } from '@mantine/core'
+import { Avatar, Box, Loader, Paper } from '@mantine/core'
 import * as React from 'react'
-import { useDisclosure } from '@mantine/hooks'
 
 const LoadingMessage = () => {
 

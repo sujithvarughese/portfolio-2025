@@ -1,6 +1,6 @@
 import React from 'react'
-import { ActionIcon, Anchor, Box, Button, Flex, Grid, Image, Indicator, Title, Tooltip } from '@mantine/core'
-import profilePictureMobile from "../assets/images/profile/profile-small.png"
+import { ActionIcon, Anchor, Box, Button, Flex, Image, Title } from '@mantine/core'
+import profilePictureMobile from "../assets/images/profile/profile-small.jpeg"
 import diploma from "../assets/images/certificates/diploma.png"
 import compTiaCert from "../assets/images/certificates/compTIA_cert.pdf"
 import metaCert from "../assets/images/certificates/meta_frontend_cert.pdf"
