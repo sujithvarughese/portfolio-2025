@@ -1,7 +1,7 @@
 import { motion } from "motion/react"
 import { fullName, bio } from '../data/data.js'
 import { useEffect, useState } from 'react'
-import profilePicture2 from "../assets/images/profile/profile.jpeg"
+import profilePicture2 from "../assets/images/profile/profile.jpg"
 import { IoLocationSharp } from "react-icons/io5";
 import profilePictureMobile from "../assets/images/profile/profile-small.jpeg"
 import { Flex, Image, Text, Title } from '@mantine/core'
