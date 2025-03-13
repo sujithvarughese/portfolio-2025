@@ -13,7 +13,7 @@ const Message = ({ sender, message }) => {
         p={8}
         w="80%"
         bg={`${sender === "user" ? "blue.4" : "lightgray"}`}
-        style={{ justifySelf: `${sender === "user" ? "end" : "start"}` }}
+        ml={sender === "user" ? 56 : 24}
       >
         <Text>{message}</Text>
       </Paper>

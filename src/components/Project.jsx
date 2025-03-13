@@ -63,8 +63,9 @@ const Project = ({
         isMobile={isMobile}
         openMobileAlert={openMobileAlert}
       />
-      <Paper
+      <UnstyledButton
         component={motion.div}
+        onClick={openProject}
         initial={cardVariants.offscreen}
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
@@ -80,26 +81,22 @@ const Project = ({
           justify="space-between"
           mx="auto"
         >
-          <UnstyledButton
-            onClick={openProject}
+          <Image
+            src={isHovering ? coverImage : coverGif} alt="project"
+            display={{ base: "none", sm: "initial" }}
+            w={{ base: 240, sm: 340 }}
+            mah={{ base: 240, sm: 340 }}
             onMouseEnter={()=>setIsHovering(true)}
             onMouseLeave={()=>setIsHovering(false)}
-          >
-            <Image
-              src={isHovering ? coverImage : coverGif} alt="project"
-              display={{ base: "none", sm: "initial" }}
+          />
+          <Image
+              src={coverImage} alt="project"
+              display={{ sm: "none" }}
               w={{ base: 240, sm: 340 }}
               mah={{ base: 240, sm: 340 }}
-              style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
-            />
-            <Image
-                src={coverImage} alt="project"
-                display={{ sm: "none" }}
-                w={{ base: 240, sm: 340 }}
-                mah={{ base: 240, sm: 340 }}
-                style={{ border: isHovering ? "5px solid dodgerblue" : "", borderRadius: 3 }}
-            />
-          </UnstyledButton>
+              onMouseEnter={()=>setIsHovering(true)}
+              onMouseLeave={()=>setIsHovering(false)}
+          />
 
           <Flex direction="column" gap={12}>
             <UnstyledButton onClick={openProject}><Title order={2}>{title}</Title></UnstyledButton>
@@ -139,7 +136,7 @@ const Project = ({
           </Flex>
 
         </Flex>
-      </Paper>
+      </UnstyledButton>
 
       <MobilePopUp opened={mobileAlertOpened} onClose={closeMobileAlert} link={link} />
     </>
