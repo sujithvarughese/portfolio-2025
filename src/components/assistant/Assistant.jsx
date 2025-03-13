@@ -1,29 +1,24 @@
-import { useEffect, useState } from 'react'
-import useSubmit from '../../hooks/useSubmit.js'
 import { Box, Button, Drawer, Flex, Textarea, Title } from '@mantine/core'
 import { IoIosSend } from "react-icons/io";
 import Message from './Message.jsx'
 import LoadingMessage from './LoadingMessage.jsx'
-import {useDispatch, useSelector} from "react-redux";
-import {addMessageToChat, fetchAiResponse} from "../../features/assistantSlice.js";
-import {useForm} from "@mantine/form";
+import {useSelector} from "react-redux";
+
 
 const Assistant = ({ opened, close, form, handleSubmit }) => {
 
   const chat = useSelector(state => state.assistant.chat)
   const loading = useSelector(state => state.assistant.loading)
 
-
-
-
   return (
     <Drawer
       opened={opened} onClose={close}
       position="right"
-      title={<Title>AI Assistant</Title>}
       size="sm"
       removeScrollProps={{ allowPinchZoom: true }}
+      style={{ position: "relative" }}
     >
+      <Title order={2} pos="absolute" top={12} style={{ textAlign: "center", fontSize: 28, zIndex: 10000 }}>AI Assistant</Title>
       <Flex direction="column" gap={20}>
         <Box>
           {chat?.map((message, index) => <Message key={index} {...message} />)}
@@ -53,8 +48,6 @@ const Assistant = ({ opened, close, form, handleSubmit }) => {
             </Flex>
           </Flex>
         </form>
-
-
       </Flex>
     </Drawer>
 
