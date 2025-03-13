@@ -7,7 +7,7 @@ import { Box, Container, Flex, Text, Title } from '@mantine/core'
 const Projects = () => {
   return (
 
-    <Box id="projects" p={12} bg="#F5F5F5">
+    <Box id="projects" p={12} bg="white">
       <Title style={{ textAlign: "center", fontSize: 42 }} p={32}>Projects</Title>
       <Flex direction="column" gap={36} align="center">
         {projects.map(project => <Project key={project.title} {...project} />)}

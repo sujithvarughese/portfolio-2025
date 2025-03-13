@@ -3,10 +3,7 @@ import axios from "axios";
 import { config } from "./constants.js";
 
 const API_KEY = import.meta.env.VITE_OPEN_AI_KEY;
-const ASSISTANT_KEY = import.meta.env.VITE_ASSISTANT_ID;
-
-
-const openai = axios.create({
+export const openai = axios.create({
 	baseURL: 'https://api.openai.com/v1',
 	headers: {
 		'Content-Type': 'application/json',
@@ -40,19 +37,4 @@ export const getOpenAIResponse = async (prompt) => {
 };
 
 
-const assistantAPI = axios.create({
-	baseURL: config.url.API_URL,
-	withCredentials: true
-});
-// response
-assistantAPI.interceptors.response.use(
-	(response) => {
-		return response;
-	},
-	(error) => {
-		// console.log(error.response)
-		return Promise.reject(error);
-	}
-);
 
-export { assistantAPI };

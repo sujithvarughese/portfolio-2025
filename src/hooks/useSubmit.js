@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { assistantAPI, getOpenAIResponse } from '../utilities/axios.js'
+import { getOpenAIResponse } from '../utilities/axios.js'
 
 const method = "POST"
 const url = "/thread"

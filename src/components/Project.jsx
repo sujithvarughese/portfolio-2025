@@ -69,7 +69,9 @@ const Project = ({
         whileInView={cardVariants.onscreen}
         viewport={cardVariants.viewport}
         whileHover={{ scale: 1.05 }}
-        shadow="xl" py={24} radius={8} px={{ base: 12, sm: 36 }} maw={850} mx="auto">
+        py={24} radius={8} px={{ base: 12, sm: 36 }} maw={850} mx="auto"
+        style={{ borderRadius: 8, boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.25)"}}
+      >
         <Flex
           direction={{ base: "column", sm: "row" }}
           style={{ overflow: "hidden" }}

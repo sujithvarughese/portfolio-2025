@@ -9,10 +9,34 @@ import Projects from './sections/Projects.jsx'
 import Footer from './sections/Footer.jsx'
 import Assistant from './components/assistant/Assistant.jsx'
 import AssistantButton from './components/assistant/AssistantButton.jsx'
+import { useForm } from '@mantine/form';
+import {addMessageToChat, fetchAiResponse} from "./features/assistantSlice.js";
+import {useDispatch} from "react-redux";
 
 const App = () => {
 
   const [opened, { open, close }] = useDisclosure(false);
+  const dispatch = useDispatch()
+
+  const form = useForm({
+    mode: 'uncontrolled',
+    initialValues: {
+      query: '',
+    }
+  });
+
+  const handleSubmit = async (query) => {
+    if (!query) {
+      return
+    }
+    if (!opened) {
+      open()
+    }
+    dispatch(addMessageToChat(query))
+    dispatch(fetchAiResponse(query))
+    form.reset()
+  }
+
 
   return (
     <AppShell m="auto">
@@ -21,13 +45,13 @@ const App = () => {
       <AppShell.Main>
         <Flex direction="column" pos="relative">
           <Hero />
-          <About />
+          <About form={form} handleSubmit={handleSubmit} />
           <Projects />
           <Footer />
         </Flex>
       </AppShell.Main>
 
-      <Assistant opened={opened} close={close} />
+      <Assistant opened={opened} close={close} form={form} handleSubmit={handleSubmit} />
     </AppShell>
   )
 }
