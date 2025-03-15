@@ -9,12 +9,18 @@ import mailIcon from "../assets/images/icons/send-message.svg"
 import cvIcon from "../assets/images/icons/cv.png"
 import HoverHeader from './HoverHeader.jsx'
 import AssistantButton from '../components/assistant/AssistantButton.jsx'
+import {motion} from "motion/react";
 
 const Header = ({ open }) => {
 
   return (
     <AppShellHeader>
-      <Flex align="center" justify="space-between" p={12}>
+      <Flex
+        component={motion.div}
+        initial={{ y: "-20%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        align="center" justify="space-between" p={12}>
 
         <Group>
           <HoverCard width="98%" offset={13}>

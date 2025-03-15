@@ -42,7 +42,12 @@ const Hero = () => {
   return (
 
     <Flex direction="column" align="center" justify="space-evenly" h="100vh" bg="black" pos="sticky" top={0} style={{ zIndex: -100 }}>
-      <Flex justify="center">
+      <Flex
+        component={motion.div}
+        initial={{ y: "20%", opacity: 0, scale: 0.7 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        justify="center">
         <Image src={profilePicture2} w="80%" maw={1400} m="auto" radius={8} mt={16} display={{ base: "none", xs: "initial"}} />
         <Image src={profilePictureMobile} w="90%" maw={350} mt={56} mb={24} m="auto" radius={8} display={{ xs: "none"}} />
       </Flex>
