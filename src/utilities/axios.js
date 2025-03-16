@@ -7,8 +7,8 @@ export const openai = axios.create({
 	headers: {
 		'Content-Type': 'application/json',
 		'Authorization': `Bearer ${API_KEY}`,
-		'OpenAI-Beta': 'assistants=v2'
+
 	},
 });
 
-
+//		'OpenAI-Beta': 'assistants=v2'

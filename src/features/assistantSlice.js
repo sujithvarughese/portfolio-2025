@@ -32,6 +32,24 @@ const assistantSlice = createSlice({
   }
 })
 const ASSISTANT_KEY = import.meta.env.VITE_ASSISTANT_ID;
+const VECTOR_STORE_ID = import.meta.env.VITE_VECTOR_STORE_ID;
+
+export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
+  try {
+    const response = await openai.post("/responses", {
+      model: "gpt-4o-mini",
+      tools: [{
+        type: "file_search",
+        vector_store_ids: [VECTOR_STORE_ID],
+        max_num_results: 20
+      }],
+      input: query,
+    })
+    return response?.data.output[1].content[0].text
+  } catch (error) {
+    throw new Error(error)
+  }
+})
 
 export const fetchAiResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
   try {
