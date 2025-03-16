@@ -15,7 +15,7 @@ const Message = ({ sender, message }) => {
         bg={`${sender === "user" ? "blue.4" : "lightgray"}`}
         ml={sender === "user" ? 56 : 24}
       >
-        <Text style={{ whiteSpace: "pre-wrap"}}>{message}</Text>
+        <Text style={{ whiteSpace: "pre-wrap", wordWrap: "break-word"}}>{message}</Text>
       </Paper>
       {sender === "assistant" &&
         <Avatar

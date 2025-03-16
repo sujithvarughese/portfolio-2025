@@ -1,4 +1,4 @@
-import { Box, Button, Drawer, Flex, Textarea, Title } from '@mantine/core'
+import {Box, Button, Drawer, Flex, Textarea, TextInput, Title} from '@mantine/core'
 import { IoIosSend } from "react-icons/io";
 import Message from './Message.jsx'
 import LoadingMessage from './LoadingMessage.jsx'
@@ -27,9 +27,8 @@ const Assistant = ({ opened, close, form, handleSubmit }) => {
         <form onSubmit={form.onSubmit(values => handleSubmit(values.query))}>
           <Flex direction="column" gap={20}>
             <Box mx={12}>
-              <Textarea
+              <TextInput
                 data-autofocus
-                minRows={4}
                 placeholder="Create Message"
                 key={form.key('query')}
                 {...form.getInputProps('query')}
