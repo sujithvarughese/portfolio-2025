@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {openai} from "../utilities/axios.js";
+import {openai, openAiStream} from "../utilities/axios.js";
 
 const initialState = {
   loading: false,
@@ -14,12 +14,15 @@ const assistantSlice = createSlice({
   initialState,
   reducers: {
     addMessageToChat: (state, action) => {
-      state.chat.push({ sender: "user", message: action.payload })
+      state.loading = false
+      state.chat.push({ sender: action.payload.sender, message: action.payload.message })
     },
+    addAiStream: (state, action) => {
+      state.chat[state.chat.length - 1].message += action.payload
+    }
   },
   extraReducers: builder => {
-    builder.addCase(fetchAiResponse.fulfilled, (state, action) => {
-      state.chat.push({ sender: "assistant", message: action.payload})
+    builder.addCase(fetchAiResponse.fulfilled, (state) => {
       state.loading = false
     })
     builder.addCase(fetchAiResponse.rejected, (state) => {
@@ -29,10 +32,58 @@ const assistantSlice = createSlice({
     builder.addCase(fetchAiResponse.pending, (state) => {
       state.loading = true
     })
+    builder.addCase(fetchAiStream.fulfilled, (state, action) => {
+      state.loading = false
+    })
+    builder.addCase(fetchAiStream.rejected, (state) => {
+      state.loading = false
+      console.log("Failed to fetch response")
+    })
+    builder.addCase(fetchAiStream.pending, (state) => {
+      state.loading = true
+    })
   }
 })
-const ASSISTANT_KEY = import.meta.env.VITE_ASSISTANT_ID;
-const VECTOR_STORE_ID = import.meta.env.VITE_VECTOR_STORE_ID;
+
+export const fetchAiStream = createAsyncThunk('assistant/fetchAiStream', async (query, thunkAPI) => {
+  try {
+    const response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${import.meta.env.VITE_OPEN_AI_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        tools: [{
+          type: "file_search",
+          vector_store_ids: [import.meta.env.VITE_VECTOR_STORE_ID],
+          max_num_results: 20
+        }],
+        input: query,
+        stream: true,
+      })
+    });
+    let res = ''
+    for await (const event of response.body) {
+      const chunkString = new TextDecoder().decode(event);
+      const payloads = chunkString.split('\n')
+      payloads.forEach(payload => {
+        if (payload.startsWith('data')) {
+          const data = JSON.parse(payload.replace('data: ', ''))
+          if (data.delta) {
+            if (!res) {
+              thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: res }))
+            }
+            res += data.delta
+            thunkAPI.dispatch(addAiStream(data.delta))
+          }
+        }
+      })
+    }
+  } catch (error) {}
+})
+
 
 export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
   try {
@@ -40,7 +91,7 @@ export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (
       model: "gpt-4o-mini",
       tools: [{
         type: "file_search",
-        vector_store_ids: [VECTOR_STORE_ID],
+        vector_store_ids: [import.meta.env.VITE_VECTOR_STORE_ID],
         max_num_results: 20
       }],
       input: query,
@@ -54,7 +105,7 @@ export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (
 export const fetchAiResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
   try {
     let run = await openai.post('/threads/runs', {
-      assistant_id: ASSISTANT_KEY,
+      assistant_id: import.meta.env.VITE_ASSISTANT_ID,
       thread: {
         messages: [{ role: "user", content: query }]
       }
@@ -78,4 +129,4 @@ export const fetchAiResponse = createAsyncThunk('assistant/fetchResponse', async
 })
 
 export default assistantSlice.reducer
-export const { addMessageToChat} = assistantSlice.actions
+export const { addMessageToChat, addAiStream} = assistantSlice.actions

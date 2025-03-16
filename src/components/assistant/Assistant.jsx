@@ -3,12 +3,21 @@ import { IoIosSend } from "react-icons/io";
 import Message from './Message.jsx'
 import LoadingMessage from './LoadingMessage.jsx'
 import {useSelector} from "react-redux";
+import {useRef, useEffect} from "react";
 
 
 const Assistant = ({ opened, close, form, handleSubmit }) => {
 
   const chat = useSelector(state => state.assistant.chat)
   const loading = useSelector(state => state.assistant.loading)
+
+  const bottomRef = useRef();
+
+  useEffect(() => {
+    if (bottomRef?.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chat]);
 
   return (
     <Drawer
@@ -35,7 +44,7 @@ const Assistant = ({ opened, close, form, handleSubmit }) => {
               />
             </Box>
 
-            <Flex justify="flex-end" mx={12}>
+            <Flex justify="flex-end" mx={12} ref={bottomRef}>
               <Button
                 type="submit"
                 loading={loading}

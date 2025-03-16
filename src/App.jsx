@@ -10,7 +10,7 @@ import Footer from './sections/Footer.jsx'
 import Assistant from './components/assistant/Assistant.jsx'
 import AssistantButton from './components/assistant/AssistantButton.jsx'
 import { useForm } from '@mantine/form';
-import {addMessageToChat, fetchAiResponse, fetchResponse} from "./features/assistantSlice.js";
+import {addMessageToChat, fetchAiResponse, fetchAiStream, fetchResponse} from "./features/assistantSlice.js";
 import {useDispatch} from "react-redux";
 
 const App = () => {
@@ -32,8 +32,8 @@ const App = () => {
     if (!opened) {
       open()
     }
-    dispatch(addMessageToChat(query))
-    dispatch(fetchResponse(query))
+    dispatch(addMessageToChat({ sender: "user", message: query}))
+    dispatch(fetchAiStream(query))
     form.reset()
   }
 
