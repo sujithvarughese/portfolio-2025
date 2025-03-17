@@ -23,6 +23,7 @@ const assistantSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(fetchAiResponse.fulfilled, (state) => {
+      state.chat.push({ sender: action.payload.sender, message: action.payload.message })
       state.loading = false
     })
     builder.addCase(fetchAiResponse.rejected, (state) => {
@@ -65,23 +66,41 @@ export const fetchAiStream = createAsyncThunk('assistant/fetchAiStream', async (
       })
     });
     let res = ''
-    for await (const event of response.body) {
-      const chunkString = new TextDecoder().decode(event);
-      const payloads = chunkString.split('\n')
-      payloads.forEach(payload => {
-        if (payload.startsWith('data')) {
-          const data = JSON.parse(payload.replace('data: ', ''))
-          if (data.delta) {
-            if (!res) {
-              thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: res }))
+    console.log(response)
+    const { body } = response;
+    try {
+      for await (const event of body) {
+        const chunkString = new TextDecoder().decode(event);
+        const payloads = chunkString.split('\n')
+        payloads.forEach(payload => {
+          if (payload.startsWith('data')) {
+            const data = JSON.parse(payload.replace('data: ', ''))
+            if (data.delta) {
+              if (!res) {
+                thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: res }))
+              }
+              res += data.delta
+              thunkAPI.dispatch(addAiStream(data.delta))
             }
-            res += data.delta
-            thunkAPI.dispatch(addAiStream(data.delta))
           }
-        }
+        })
+      }
+    } catch (error) {
+      const response = await openai.post("/responses", {
+        model: "gpt-4o-mini",
+        tools: [{
+          type: "file_search",
+          vector_store_ids: [import.meta.env.VITE_VECTOR_STORE_ID],
+          max_num_results: 20
+        }],
+        input: query,
       })
+      console.log(response)
+      thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: response?.data.output[1].content[0].text }))
     }
-  } catch (error) {}
+  } catch (error) {
+    console.log(error)
+  }
 })
 
 
