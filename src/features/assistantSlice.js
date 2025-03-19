@@ -23,7 +23,6 @@ const assistantSlice = createSlice({
   },
   extraReducers: builder => {
     builder.addCase(fetchAiResponse.fulfilled, (state) => {
-      state.chat.push({ sender: action.payload.sender, message: action.payload.message })
       state.loading = false
     })
     builder.addCase(fetchAiResponse.rejected, (state) => {
@@ -66,7 +65,6 @@ export const fetchAiStream = createAsyncThunk('assistant/fetchAiStream', async (
       })
     });
     let res = ''
-    console.log(response)
     const { body } = response;
     try {
       for await (const event of body) {
@@ -95,14 +93,12 @@ export const fetchAiStream = createAsyncThunk('assistant/fetchAiStream', async (
         }],
         input: query,
       })
-      console.log(response)
       thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: response?.data.output[1].content[0].text }))
     }
   } catch (error) {
-    console.log(error)
+    throw new Error(error)
   }
 })
-
 
 export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
   try {
