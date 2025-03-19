@@ -50,7 +50,7 @@ const About = ({ form, handleSubmit }) => {
               whileInView={{ ...cardVariants.onscreen, x: 25 }}
               viewport={cardVariants.viewport}
               style={{ borderRadius: 8, boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.25)", zIndex: 1}}
-              p="xl" bg="orange.5" mih={400} justify="center" align="center"
+              p="xl" bg="orange.5" mih={400} justify="center" align="center" w="50%"
             >
               <Text style={{ whiteSpace: "break-spaces", textAlign: "justify", textJustify: "auto"}}>
                 {aboutMeUpdated}
@@ -63,7 +63,7 @@ const About = ({ form, handleSubmit }) => {
               whileInView={{ ...cardVariants.onscreen, x: -25 }}
               viewport={cardVariants.viewport}
               style={{ borderRadius: 8, boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.25)", zIndex: 0}}
-              maw={700}
+              w="50%"
             >
               <Image
                 src={profilePicture}
