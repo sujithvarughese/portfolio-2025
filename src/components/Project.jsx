@@ -82,7 +82,7 @@ const Project = ({
           mx="auto"
         >
           <Image
-            src={isHovering ? coverImage : coverGif} alt="project"
+            src={isHovering ? coverGif : coverImage} alt="project"
             display={{ base: "none", sm: "initial" }}
             w={{ base: 240, sm: 340 }}
             mah={{ base: 240, sm: 340 }}

@@ -1,8 +1,14 @@
-import medscopeCoverIMG from "../assets/images/projects/medscope/cover.jpeg"
+import medscopeCoverIMG from "../assets/images/projects/medscope/cover.png"
 import medscopeCoverGIF from "../assets/images/projects/medscope/cover.gif"
 import medscopeHomeIMG from "../assets/images/projects/medscope/screenshot-home.png"
 import medscopeProfileIMG from "../assets/images/projects/medscope/screenshot-profile.png"
 import medscopeDrugIMG from "../assets/images/projects/medscope/screenshot-drug.png"
+
+import moduloCoverIMG from "../assets/images/projects/modulo/cover.png"
+import moduloCoverGIF from "../assets/images/projects/modulo/cover.gif"
+import moduloHomeIMG from "../assets/images/projects/modulo/home.png"
+import moduloResultsIMG from "../assets/images/projects/modulo/results.png"
+import moduloInfoIMG from "../assets/images/projects/modulo/info.png"
 
 import bookstaxCoverIMG from "../assets/images/projects/bookstax/cover.png"
 import bookstaxCoverGIF from "../assets/images/projects/bookstax/cover.gif"
@@ -81,6 +87,27 @@ export const projects = [
 			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
 		],
 		images : [dashboardIMG, galleryModeIMG, messagesIMG, listModeIMG, fmrIMG],
+		desktop: rsDesktop,
+		mobile: rsMobile,
+		link: 'https://lease-wise.com',
+		github: 'https://github.com/sujithvarughese/leasewise-api',
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
+		featured: true,
+		isMobile: false,
+		width: "50%"
+	},
+	{
+		title: "Modulo AI",
+		coverImage: moduloCoverIMG,
+		coverGif: moduloCoverGIF,
+		heading: "Smart Ways to use the Remainder of your time: By analyzing open slots in your calendar, Modulo uses AI to suggest meaningful and personalized activities based on your interests.",
+		description: "Modulo is a smart productivity assistant that syncs with your phone’s calendar to identify free time in your day and uses AI to suggest meaningful activities.\n\nWhether it's a quick workout, a mindfulness break, or a skill-building task, Modulo helps you make the most of every moment.",
+		captions: [
+			"Built in React Native using Expo that integrates with the device’s system calendar to analyze daily schedules in real time.",
+			"Utilized OpenAI’s API to generate personalized, productive activity suggestions during gaps in a user’s calendar.",
+			"Implemented seamless calendar syncing and intelligent time-slot detection to enhance daily planning."
+		],
+		images : [moduloHomeIMG, moduloResultsIMG, moduloInfoIMG],
 		desktop: rsDesktop,
 		mobile: rsMobile,
 		link: 'https://lease-wise.com',
