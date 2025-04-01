@@ -38,6 +38,7 @@ const Project = ({
   link,
   isMobile,
   github,
+  appStore,
   captions,
   images,
   tech,
@@ -59,6 +60,7 @@ const Project = ({
         captions={captions}
         link={link}
         github={github}
+        appStore={appStore}
         tech={tech}
         isMobile={isMobile}
         openMobileAlert={openMobileAlert}
@@ -117,15 +119,20 @@ const Project = ({
                 leftSection={<LiaGithub size={24} />}
               >Github
               </Button>
-              {isMobile ?
-              <Button variant="light" size="lg" onClick={openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button>
-              :
-              <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>
+              {link &&
+              <>
+                {isMobile ?
+                  <Button variant="light" size="lg" onClick={openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button>
+                  :
+                  <Button component="a" variant="light" size="lg" href={link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>
+                }
+              </>
               }
-              {title === "Trivia Night AI" &&
+
+              {appStore &&
               <Button
                 component={Anchor}
-                href="https://apps.apple.com/us/app/trivia-night-ai/id6741895843"
+                href={appStore}
                 variant="light" size="lg"
                 target="_blank"
                 leftSection={<FaAppStore size={24}/>}
