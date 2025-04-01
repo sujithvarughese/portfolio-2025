@@ -74,6 +74,8 @@ const Project = ({
         whileHover={{ scale: 1.05 }}
         py={24} radius={8} px={{ base: 12, sm: 36 }} maw={850} mx="auto"
         style={{ borderRadius: 8, boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.25)"}}
+        onMouseEnter={()=>setIsHovering(true)}
+        onMouseLeave={()=>setIsHovering(false)}
       >
         <Flex
           direction={{ base: "column", sm: "row" }}
@@ -88,8 +90,6 @@ const Project = ({
             display={{ base: "none", sm: "initial" }}
             w={{ base: 240, sm: 340 }}
             mah={{ base: 240, sm: 340 }}
-            onMouseEnter={()=>setIsHovering(true)}
-            onMouseLeave={()=>setIsHovering(false)}
           />
           <Image
               src={coverImage} alt="project"

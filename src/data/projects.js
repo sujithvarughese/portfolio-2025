@@ -207,7 +207,7 @@ export const projects = [
 		title: "On the Books",
 		coverImage: onTheBooksCoverIMG,
 		coverGif: onTheBooksCoverGIF,
-		heading: "My first reading application, developed early in my journey, is a web app designed to help you organize your library, discover new books with the OpenLibrary API, and take notes effortlessly.",
+		heading: "A personal reading web app built early in my development journey, designed to help users organize their library, discover new titles through the OpenLibrary API, and take notes seamlessly. This project strengthened my skills in API integration, state management, and user-focused design.",
 		description: "One of the first full-stack web applications I designed and created. This is the original version of the BOOKSTAX app, and performs much of the same functionality.",
 		captions: [
 			"OpenLibrary API integration to search books by genre and get previews and recommendations.",
