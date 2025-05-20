@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {openai, openAiStream} from "../utilities/axios.js";
+import {openai} from "../utilities/axios.js";
 
 const initialState = {
   loading: false,
