@@ -36,7 +36,7 @@ const About = ({ form, handleSubmit }) => {
             <form onSubmit={form.onSubmit(values => handleSubmit(values.query))} style={{ borderRadius: 12 }}>
               <Flex gap={12} w="100%" justify="center">
                 <TextInput placeholder="What are Sujith's skills?" key={form.key('query')}{...form.getInputProps('query')} w="70%"/>
-                <Button type="submit" variant="gradient" loaderProps={{ type: 'dots' }} rightSection={<IoIosSend size={20}/>} >Send</Button>
+                <Button w={96} type="submit" variant="gradient" loaderProps={{ type: 'dots' }} rightSection={<IoIosSend size={20}/>}>Send</Button>
               </Flex>
             </form>
           </Box>
