@@ -88,14 +88,14 @@ const Project = ({
           <Image
             src={isHovering ? coverGif : coverImage} alt="project"
             display={{ base: "none", sm: "initial" }}
-            w={{ base: 240, sm: 340 }}
-            mah={{ base: 240, sm: 340 }}
+            w={340}
+            mah={340}
           />
           <Image
             src={coverImage} alt="project"
             display={{ sm: "none" }}
-            w={{ base: 240, sm: 340 }}
-            mah={{ base: 240, sm: 340 }}
+            w={340}
+            mah={340}
           />
           <Flex direction="column" gap={12}>
             <UnstyledButton onClick={openProject}><Title order={2}>{title}</Title></UnstyledButton>
