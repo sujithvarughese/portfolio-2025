@@ -22,16 +22,6 @@ const assistantSlice = createSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase(fetchAiResponse.fulfilled, (state) => {
-      state.loading = false
-    })
-    builder.addCase(fetchAiResponse.rejected, (state) => {
-      state.loading = false
-      console.log("Failed to fetch response")
-    })
-    builder.addCase(fetchAiResponse.pending, (state) => {
-      state.loading = true
-    })
     builder.addCase(fetchAiStream.fulfilled, (state, action) => {
       state.loading = false
     })
@@ -145,49 +135,6 @@ export const _fetchAiStream = createAsyncThunk('assistant/fetchAiStream', async 
         input: query,
       })
       thunkAPI.dispatch(addMessageToChat({ sender: "assistant", message: response?.data.output[1].content[0].text }))
-    }
-  } catch (error) {
-    throw new Error(error)
-  }
-})
-
-export const fetchResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
-  try {
-    const response = await openai.post("/responses", {
-      model: "gpt-4o-mini",
-      tools: [{
-        type: "file_search",
-        vector_store_ids: [import.meta.env.VITE_VECTOR_STORE_ID],
-        max_num_results: 20
-      }],
-      input: query,
-    })
-    return response?.data.output[1].content[0].text
-  } catch (error) {
-    throw new Error(error)
-  }
-})
-
-export const fetchAiResponse = createAsyncThunk('assistant/fetchResponse', async (query) => {
-  try {
-    let run = await openai.post('/threads/runs', {
-      assistant_id: import.meta.env.VITE_ASSISTANT_ID,
-      thread: {
-        messages: [{ role: "user", content: query }]
-      }
-    });
-    const threadId = run.data.thread_id
-    const runId = run.data.id
-    while (run.data.status !== "completed") {
-      run = await openai.get(`/threads/${threadId}/runs/${runId}`)
-    }
-    if (run.data.status === 'completed') {
-      const messages = await openai.get(`/threads/${threadId}/messages`)
-      openai.delete(`https://api.openai.com/v1/threads/${threadId}`)
-      return messages.data.data[0].content[0].text.value.replace(/\【.*?】/g, '')
-      //return message[message.length - 2] === "】" ? message.substring(0, message.length - 13).concat(".") : message
-    } else {
-      console.log(run.status);
     }
   } catch (error) {
     throw new Error(error)
