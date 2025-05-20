@@ -1,10 +1,8 @@
 import { aboutMeUpdated } from '../data/data.js'
-import profilePicture from "../assets/images/profile/hera.jpeg"
 import {Box, Button, Flex, Image, Text, TextInput, Title} from '@mantine/core'
 import {motion} from "motion/react";
 import {IoIosSend} from "react-icons/io";
 import AboutHeading from "../components/AboutHeading.jsx";
-
 
 const About = ({ form, handleSubmit }) => {
 
@@ -66,7 +64,7 @@ const About = ({ form, handleSubmit }) => {
               w="50%"
             >
               <Image
-                src={profilePicture}
+                src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718379/hera_sbp9lo.jpg"
                 alt="Profile Picture"
                 radius={8}
               />
@@ -96,7 +94,7 @@ const About = ({ form, handleSubmit }) => {
               w="90%"
             >
               <Image
-                src={profilePicture}
+                src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718379/hera_sbp9lo.jpg"
                 alt="Profile Picture"
                 radius={8}
               />

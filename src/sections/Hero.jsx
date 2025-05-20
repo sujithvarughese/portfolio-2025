@@ -1,9 +1,7 @@
 import { motion } from "motion/react"
 import { fullName, bio } from '../data/data.js'
 import { useEffect, useState } from 'react'
-import profilePicture2 from "../assets/images/profile/profile.jpg"
 import { IoLocationSharp } from "react-icons/io5";
-import profilePictureMobile from "../assets/images/profile/profile-small.jpeg"
 import {Flex, Image, Text, Title} from '@mantine/core'
 
 
@@ -48,8 +46,8 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
         justify="center">
-        <Image src={profilePicture2} w="80%" maw={1600} m="auto" radius={8} mt={16} display={{ base: "none", xs: "initial"}} />
-        <Image src={profilePictureMobile} w="90%" maw={350} mt={56} mb={24} m="auto" radius={8} display={{ xs: "none"}} />
+        <Image src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg" w="80%" maw={1600} m="auto" radius={8} mt={16} display={{ base: "none", xs: "initial"}} />
+        <Image src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718386/profile-small_jvan2o.jpg" w="90%" maw={350} mt={56} mb={24} m="auto" radius={8} display={{ xs: "none"}} />
       </Flex>
 
       <Flex direction="column" align="center" h={125} mt={{ base: -50, sm: 0 }}>

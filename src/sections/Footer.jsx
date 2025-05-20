@@ -4,7 +4,7 @@ import linkedInIcon from '../assets/images/icons/linkedin-icon.svg';
 import githubIcon from "../assets/images/icons/github-mark-white.svg"
 import sendMessageIcon from "../assets/images/icons/send-message.svg"
 import { emailAddress } from '../data/data.js'
-import resume from '../assets/images/certificates/varughese_resume.pdf'
+import resume from '../assets/images/varughese_resume.pdf'
 import cvIcon from '../assets/images/icons/cv.png'
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { ActionIcon, AppShellHeader, Burger, Flex, Group, HoverCard, Image, Text, Title, Tooltip, } from '@mantine/core'
-import svImage from "../assets/images/profile/sv.jpeg"
-import resume from "../assets/images/certificates/varughese_resume.pdf"
+import resume from "../assets/images/varughese_resume.pdf"
 const emailAddress = "sujith.varug@gmail.com"
 import linkedInIcon from '../assets/images/icons/linkedin-icon.svg';
 import githubIcon from "../assets/images/icons/github-mark-white.svg"
