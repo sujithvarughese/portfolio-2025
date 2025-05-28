@@ -1,4 +1,4 @@
-import { RiJavascriptFill } from "react-icons/ri";
+import { RiJavascriptFill, RiNextjsFill } from "react-icons/ri";
 import { FaReact, FaNode, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { TbApiApp, TbBinaryTree, TbFileTypeSql } from 'react-icons/tb'
 import { SiHtml5, SiMui, SiCss3, SiBootstrap, SiMongodb, SiOpenai, SiChakraui, SiStyledcomponents, SiExpo, SiFirebase, SiGraphql, SiJest, SiPostman, SiTailwindcss, SiJetbrains, SiGoogleanalytics, SiPython, SiMantine } from 'react-icons/si'
@@ -34,6 +34,7 @@ export default IconPill
 export const logos = {
   "JavaScript": <RiJavascriptFill size="32px" />,
   "TypeScript": <BiLogoTypescript size="32px" />,
+  "NextJS": <RiNextjsFill size="28px" />,
   "Python": <SiPython size="28px" />,
   "Java": <FaJava size="28px" />,
   "OpenAI": <SiOpenai size="28px" />,

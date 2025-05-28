@@ -1,5 +1,5 @@
 
-import {RiJavascriptFill} from "react-icons/ri";
+import {RiJavascriptFill, RiNextjsFill} from "react-icons/ri";
 import {
   SiBootstrap,
   SiChakraui,
