@@ -68,7 +68,7 @@ export const projects = [
 		],
 		link: 'https://authentime.vercel.app',
 		github: 'https://github.com/sujithvarughese/watch-app',
-		appStore: '',
+		appStore: 'https://apps.apple.com/us/app/authentime/id6746581706',
 		tech: ["TypeScript", "NextJS", "OpenAI", "React", "Mantine UI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
