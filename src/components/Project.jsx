@@ -90,12 +90,14 @@ const Project = ({
             display={{ base: "none", sm: "initial" }}
             w={340}
             mah={340}
+            radius={8}
           />
           <Image
             src={coverImage} alt="project"
             display={{ sm: "none" }}
             w={340}
             mah={340}
+            radius={8}
           />
           <Flex direction="column" gap={12}>
             <UnstyledButton onClick={openProject}><Title order={2}>{title}</Title></UnstyledButton>

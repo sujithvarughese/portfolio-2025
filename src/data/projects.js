@@ -24,6 +24,31 @@ export const projects = [
 		width: "50%"
 	},
 	{
+		title: "Authentime",
+		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474246/20250528_1250_Authentime_AI_Watch_Verification_simple_compose_01jwbwt7tbf20t2r6q36r6f4wy_jr25mf.png",
+		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474256/Untitled_mhwgmo.gif",
+		heading: "Authentime is a cutting-edge application that leverages artificial intelligence to analyze and authenticate luxury timepieces. Our sophisticated AI system examines various aspects of watches to help determine their authenticity.",
+		description: "Authentime uses advanced AI technology to instantly verify the authenticity of luxury watches.\n\nSimply upload a photo, and our system analyzes key details like dial patterns, engravings, and serial placements to determine if your timepiece is genuine. Whether you're buying, selling, or collecting, Authentime gives you confidence in every tick.",
+		captions: [
+			"AI-Powered Watch Authentication – Instantly verify luxury watches through high-accuracy image analysis",
+			"Photo-Based Detection – Upload a photo and get an authenticity score based on visual markers and metadata",
+			"Built with TypeScript & Next.js – Modern, scalable, and lightning-fast architecture",
+			"Confidence for Buyers, Sellers & Collectors – Designed to reduce fraud and bring trust to the watch marketplace"
+		],
+		images : [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232413/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.56.04_kg3zby.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232418/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.57.02_rz73pw.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232422/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.59.21_ih1zjv.png",
+		],
+		link: 'https://authentime.vercel.app',
+		github: 'https://github.com/sujithvarughese/watch-app',
+		appStore: 'https://apps.apple.com/us/app/authentime/id6746581706',
+		tech: ["TypeScript", "NextJS", "OpenAI", "React", "Mantine UI", "HTML", "CSS"],
+		featured: true,
+		isMobile: false,
+		width: "50%"
+	},
+	{
 		title: "LeaseWise",
 		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718311/cover_cxhrxn.png",
 		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718306/cover_vttsp6.gif",
@@ -45,31 +70,6 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/leasewise-api',
 		appStore: '',
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
-		featured: true,
-		isMobile: false,
-		width: "50%"
-	},
-	{
-		title: "Authentime",
-		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474246/20250528_1250_Authentime_AI_Watch_Verification_simple_compose_01jwbwt7tbf20t2r6q36r6f4wy_jr25mf.png",
-		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474256/Untitled_mhwgmo.gif",
-		heading: "Authentime is a cutting-edge application that leverages artificial intelligence to analyze and authenticate luxury timepieces. Our sophisticated AI system examines various aspects of watches to help determine their authenticity.",
-		description: "Authentime uses advanced AI technology to instantly verify the authenticity of luxury watches.\n\nSimply upload a photo, and our system analyzes key details like dial patterns, engravings, and serial placements to determine if your timepiece is genuine. Whether you're buying, selling, or collecting, Authentime gives you confidence in every tick.",
-		captions: [
-			"AI-Powered Watch Authentication – Instantly verify luxury watches through high-accuracy image analysis",
-			"Photo-Based Detection – Upload a photo and get an authenticity score based on visual markers and metadata",
-			"Built with TypeScript & Next.js – Modern, scalable, and lightning-fast architecture",
-			"Confidence for Buyers, Sellers & Collectors – Designed to reduce fraud and bring trust to the watch marketplace"
-		],
-		images : [
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474553/Screenshot_2025-05-28_at_7.21.11_PM_hcvry8.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474557/Screenshot_2025-05-28_at_7.21.47_PM_vnqqv1.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474547/Screenshot_2025-05-28_at_2.33.44_PM_i1qfzq.png",
-		],
-		link: 'https://authentime.vercel.app',
-		github: 'https://github.com/sujithvarughese/watch-app',
-		appStore: 'https://apps.apple.com/us/app/authentime/id6746581706',
-		tech: ["TypeScript", "NextJS", "OpenAI", "React", "Mantine UI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
 		width: "50%"
