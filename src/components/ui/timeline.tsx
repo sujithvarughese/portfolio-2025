@@ -98,7 +98,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <Flex gap={12} justify={{ base: "center", sm: "flex-start" }} wrap="wrap">
                 {item.appStore &&
                   <Button
-                    component={Anchor}
+                    component="a"
                     href={item.appStore}
                     variant="light" size="lg"
                     target="_blank"
