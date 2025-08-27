@@ -106,9 +106,9 @@ const Hero = ({ form, handleSubmit }) => {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <button className="w-60 transform cursor-pointer rounded-lg border bg-green-500 px-6 py-2 font-medium text-black transition-all duration-300 hover:bg-green-800 dark:border-gray-800 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+          <a href={`mailto:${emailAddress}`}  className="w-60 transform cursor-pointer rounded-lg text-center font-bold bg-green-500 px-6 py-3 text-white transition-all duration-300 hover:bg-green-800">
             Email me
-          </button>
+          </a>
           <Box bg="white" p={24} w="90%" maw={550} style={{ borderRadius: 8, boxShadow: "0px 0px 4px 0px rgba(0,0,0,0.25)"}}>
             <Text size="lg" weight={700} mb={12} ta="center">AI Assistant</Text>
             <form onSubmit={form.onSubmit(values => handleSubmit(values.query))} style={{ borderRadius: 12 }}>

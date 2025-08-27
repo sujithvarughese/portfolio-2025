@@ -54,8 +54,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Projects throughout my journey.
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on these applications for the past 5 years. Here&apos;s
-          a timeline of my journey.
+          A showcase of the web and mobile applications I’ve designed, built, and deployed over the past five years, highlighting growth, creativity, and technical skill.
         </p>
       </div>
 

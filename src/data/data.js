@@ -21,15 +21,15 @@ export const heroImages = [
     quote: "Building bridges between ideas and execution by delivering software that’s tested, reliable, and ready to scale."
   },
   {
-    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718386/profile-small_jvan2o.jpg",
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718379/hera_sbp9lo.jpg",
     quote: "Proficient in both functional and object-oriented programming: JavaScript, TypeScript, Python, Java, and C++."
   },
   {
-    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1756333768/IMG_3300_kqo8vq.jpg",
     quote: "Four years of experience in React, React Native, NextJS, HTML, CSS, NodeJS, Express, SQL, MongoDB, and Docker."
   },
   {
-    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1756334025/profile-small-1_natntd_kfbibb.png",
     quote: "Experienced in the software developmental life cycle, network configuration, AWS, Google Cloud, and app store publishing."
   },
 ]
