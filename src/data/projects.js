@@ -12,6 +12,7 @@ export const projects = [
 			"Confidence for Buyers, Sellers & Collectors – Designed to reduce fraud and bring trust to the watch marketplace"
 		],
 		images : [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474246/20250528_1250_Authentime_AI_Watch_Verification_simple_compose_01jwbwt7tbf20t2r6q36r6f4wy_jr25mf.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232413/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.56.04_kg3zby.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232418/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.57.02_rz73pw.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1749232422/Simulator_Screenshot_-_iPhone_16_Pro_-_2025-06-05_at_20.59.21_ih1zjv.png",
@@ -37,6 +38,7 @@ export const projects = [
 			"Implemented seamless calendar syncing and intelligent time-slot detection to enhance daily planning."
 		],
 		images : [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718358/cover_kzp6t5.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718357/home_tc2hth.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718356/results_z91wlm.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718354/info_zwkuek.png"
@@ -61,6 +63,7 @@ export const projects = [
 			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
 		],
 		images: [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718334/cover_vpx54s.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718332/screenshot-home_ktzcpi.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718331/screenshot-drug_s66qqp.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718329/screenshot-profile_nfjmiz.png"
@@ -86,10 +89,10 @@ export const projects = [
 			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
 		],
 		images : [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718311/cover_cxhrxn.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718305/lw-gallery_dmawbj.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718302/lw-dashboard_jut8en.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718303/lw-messages_ihyejo.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718308/mobile-finances_hi1bkj.png"
 		],
 		link: 'https://lease-wise.com',
 		github: 'https://github.com/sujithvarughese/leasewise-api',
@@ -112,6 +115,7 @@ export const projects = [
 			"Workouts are efficiently loaded: Front end utilizes infinite-type scrolling which fetches paginated results as user scrolls."
 		],
 		images: [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718351/cover_bpjcju.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718353/browse_j7pjbr.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718350/search_pmbaxt.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718349/instructions_rbci1f.png"
@@ -137,6 +141,7 @@ export const projects = [
 			"Uses OpenAI Chat Completions API to generate explanations for every answer.",
 		],
 		images: [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718339/cover_h9485g.jpg",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718336/ss1_yylzvr.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718337/ss2_ltbnst.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718337/ss3_tawktq.png"
@@ -185,6 +190,7 @@ export const projects = [
 			"Google Firebase to manage and log in users."
 		],
 		images: [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718328/cover_ukn8zx.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718325/screenshot-home_case6c.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718328/screenshot-library_i7xiox.png",
 			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718328/screenshot-discover_yn1lw5.png"

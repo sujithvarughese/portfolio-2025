@@ -18,7 +18,7 @@ export const emailAddress = "sujith.varug@gmail.com"
 export const heroImages = [
   {
     src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
-    quote: "Turning ideas into reliable, production-ready software."
+    quote: "Building bridges between ideas and execution by delivering software that’s tested, reliable, and ready to scale."
   },
   {
     src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718386/profile-small_jvan2o.jpg",

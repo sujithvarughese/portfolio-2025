@@ -22,7 +22,7 @@ const Header = ({ open }) => {
         align="center" justify="space-between" p={12}>
 
         <Group>
-          <HoverCard width="98%" offset={13}>
+          <HoverCard width="98%" offset={13} display={{ sm: "none" }}>
             <HoverCard.Target>
               <Burger  />
             </HoverCard.Target>
