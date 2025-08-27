@@ -12,6 +12,7 @@ import AssistantButton from './components/assistant/AssistantButton.jsx'
 import { useForm } from '@mantine/form';
 import {addMessageToChat, fetchAiStream} from "./features/assistantSlice.js";
 import {useDispatch} from "react-redux";
+import {Spotlight} from "./components/ui/spotlight-new";
 
 const App = () => {
 
@@ -44,9 +45,17 @@ const App = () => {
 
       <AppShell.Main>
         <Flex direction="column" pos="relative">
-          <Hero />
-          <About form={form} handleSubmit={handleSubmit} />
-          <Projects />
+          <div className="w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+            <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+              <Spotlight />
+              <div className="px-4 py-10 md:py-20">
+                <Hero form={form} handleSubmit={handleSubmit} />
+                <Projects />
+
+              </div>
+            </div>
+          </div>
+
           <Footer />
         </Flex>
       </AppShell.Main>

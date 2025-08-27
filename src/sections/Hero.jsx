@@ -3,7 +3,8 @@ import { fullName, bio } from '../data/data.js'
 import { useEffect, useState } from 'react'
 import { IoLocationSharp } from "react-icons/io5";
 import {Flex, Image, Text, Title} from '@mantine/core'
-
+import {AnimatedTestimonials} from "../components/ui/animated-testimonials.js";
+import { heroImages } from "../data/data.js";
 
 const Hero = () => {
 
@@ -39,20 +40,43 @@ const Hero = () => {
 
   return (
 
-    <Flex direction="column" align="center" justify="space-evenly" h="100vh" bg="black" pos="sticky" top={0} style={{ zIndex: -100 }}>
-      <Flex
-        component={motion.div}
-        initial={{ y: "20%", opacity: 0, scale: 0.7 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        justify="center">
-        <Image src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg" w="80%" maw={1600} m="auto" radius={8} mt={16} display={{ base: "none", xs: "initial"}} />
-        <Image src="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718386/profile-small_jvan2o.jpg" w="90%" maw={350} mt={56} mb={24} m="auto" radius={8} display={{ xs: "none"}} />
-      </Flex>
+    <div className="md:flex items-center justify-center gap-10">
+      <div>
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-white md:text-4xl lg:text-7xl dark:text-slate-300">
+          {currentNameText
+            .split(" ")
+            .map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.1,
+                  ease: "easeInOut",
+                }}
+                className="mr-2 inline-block"
+              >
+                {word}
+              </motion.span>
+            ))}
+        </h1>
+        <motion.p
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 0.8,
+          }}
+          className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-white dark:text-neutral-400"
+        >
+          {currentIntroductionText}
+        </motion.p>
 
-      <Flex direction="column" align="center" h={125} mt={{ base: -50, sm: 0 }}>
-        <Title c="white" style={{ fontSize: 42 }} display={{ base: "none", xs: "initial"}}>{currentNameText}</Title>
-        <Title c="white" order={2}>{currentIntroductionText}</Title>
         <Flex justify="center" align="center">
           <motion.div
             initial={{ opacity: 0, y: -1000 }}
@@ -65,11 +89,34 @@ const Hero = () => {
           </motion.div>
           <Text c="white" >{currentLocationText}</Text>
         </Flex>
-      </Flex>
-    </Flex>
 
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            delay: 1,
+          }}
+          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+        >
+          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+            Email me
+          </button>
+          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-gray-900">
+            Chat now!
+          </button>
 
+        </motion.div>
+      </div>
+      <AnimatedTestimonials testimonials={heroImages} />
+    </div>
   )
 }
 
 export default Hero
+
+

@@ -1,5 +1,13 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300, 400, 500, 600, 700, 800, 900');
 @import url('https://fonts.googleapis.com/css?family=Italiana:300, 400, 500, 600, 700, 800, 900');
+
+@theme inline {
+    /* Configure your theme variables here */
+    --font-display: "Inter", "sans-serif";
+    --color-primary-500: oklch(0.84 0.18 117.33);
+    --spacing: 0.25rem;
+}
 
 .social-icon a {
     width: 42px;

@@ -14,3 +14,22 @@ export const projectTestingMessage = "App currently in testing. Full source code
 export const mobileWarning = "Note: Please be warned this app was designed for mobile. I created this web simulator to get a basic idea of the app navigation. Your browser window size will need to be adjusted accordingly. Links, icons, and pictures may not render in your web browser."
 
 export const emailAddress = "sujith.varug@gmail.com"
+
+export const heroImages = [
+  {
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
+    quote: "Turning ideas into reliable, production-ready software."
+  },
+  {
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718386/profile-small_jvan2o.jpg",
+    quote: "Proficient in both functional and object-oriented programming: JavaScript, TypeScript, Python, Java, and C++."
+  },
+  {
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
+    quote: "Four years of experience in React, React Native, NextJS, HTML, CSS, NodeJS, Express, SQL, MongoDB, and Docker."
+  },
+  {
+    src: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718384/profile_wyz7ae.jpg",
+    quote: "Experienced in the software developmental life cycle, network configuration, AWS, Google Cloud, and app store publishing."
+  },
+]

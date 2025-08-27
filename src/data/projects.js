@@ -1,29 +1,5 @@
 export const projects = [
 	{
-		title: "MedScope",
-		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718334/cover_vpx54s.png",
-		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718331/cover_uiznsi.gif",
-		heading: "A comprehensive health and medical information app that allows users to look up detailed drug and medical condition information, receive personalized health assessments, identify possible conditions based on symptoms, and calculate BMI along with other useful health metrics.",
-		description: "Tired of relying on medical advice from internet strangers? Simply enter your symptoms and basic profile details, and let AI provide you with potential conditions and treatment options.",
-		captions: [
-			"Built in TypeScript in both React and React Native with React Router, Redux Toolkit for seamless navigation and efficient state management.",
-			"Search any drug or health condition with autocompletion using National Institute of Health's RX-Terms API.",
-			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
-		],
-		images: [
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718332/screenshot-home_ktzcpi.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718331/screenshot-drug_s66qqp.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718329/screenshot-profile_nfjmiz.png"
-		],
-		link: 'https://medscope.app',
-		github: 'https://github.com/sujithvarughese/medscope-info',
-		appStore: '',
-		tech: ["TypeScript", "OpenAI", "React Native", "Expo", "NodeJS", "HTML", "CSS"],
-		featured: false,
-		isMobile: false,
-		width: "50%"
-	},
-	{
 		title: "Authentime",
 		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474246/20250528_1250_Authentime_AI_Watch_Verification_simple_compose_01jwbwt7tbf20t2r6q36r6f4wy_jr25mf.png",
 		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474256/Untitled_mhwgmo.gif",
@@ -46,33 +22,8 @@ export const projects = [
 		tech: ["TypeScript", "NextJS", "OpenAI", "React", "Mantine UI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
-		width: "50%"
-	},
-	{
-		title: "LeaseWise",
-		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718311/cover_cxhrxn.png",
-		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718306/cover_vttsp6.gif",
-		heading: "Streamline your real estate management: Track finances, explore nationwide housing listings and rental market rates, and connect seamlessly with a built-in messaging client.",
-		description: "While working in real estate, I recognized the need for a more efficient system to manage payments and facilitate tenant-owner communication.\n\nLeaseWise simplifies property management by allowing you to track profits and losses, monitor recent and upcoming payments, and access real-time nationwide listings and rental rates.",
-		captions: [
-			"Supports distinct user roles for tenants and managers, with secure authentication via JSON Web Tokens embedded in signed HTTP cookies.",
-			"Comprehensive MLS listing search and fair market rental rates powered by APIs from HUD.gov and Realty-in-US.",
-			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
-		],
-		images : [
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718305/lw-gallery_dmawbj.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718302/lw-dashboard_jut8en.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718303/lw-messages_ihyejo.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718307/home-mobile_gtd5xt.png",
-			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718308/mobile-finances_hi1bkj.png"
-		],
-		link: 'https://lease-wise.com',
-		github: 'https://github.com/sujithvarughese/leasewise-api',
-		appStore: '',
-		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
-		featured: true,
-		isMobile: false,
-		width: "50%"
+		width: "50%",
+		date: "2025"
 	},
 	{
 		title: "Modulo AI",
@@ -94,6 +45,56 @@ export const projects = [
 		github: 'https://github.com/sujithvarughese/modulo',
 		appStore: 'https://apps.apple.com/us/app/modulo-ai/id6743953454',
 		tech: ["TypeScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
+		featured: true,
+		isMobile: false,
+		width: "50%"
+	},
+	{
+		title: "MedScope",
+		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718334/cover_vpx54s.png",
+		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718331/cover_uiznsi.gif",
+		heading: "A comprehensive health and medical information app that allows users to look up detailed drug and medical condition information, receive personalized health assessments, identify possible conditions based on symptoms, and calculate BMI along with other useful health metrics.",
+		description: "Tired of relying on medical advice from internet strangers? Simply enter your symptoms and basic profile details, and let AI provide you with potential conditions and treatment options.",
+		captions: [
+			"Built in TypeScript in both React and React Native with React Router, Redux Toolkit for seamless navigation and efficient state management.",
+			"Search any drug or health condition with autocompletion using National Institute of Health's RX-Terms API.",
+			"Open AI chat completion API uses custom prompts based on user's age, sex, and symptoms to return drug information, interactions, health tips, and latest health news.",
+		],
+		images: [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718332/screenshot-home_ktzcpi.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718331/screenshot-drug_s66qqp.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718329/screenshot-profile_nfjmiz.png"
+		],
+		link: 'https://medscope.app',
+		github: 'https://github.com/sujithvarughese/medscope-info',
+		appStore: '',
+		tech: ["TypeScript", "OpenAI", "React Native", "Expo", "NodeJS", "HTML", "CSS"],
+		featured: false,
+		isMobile: false,
+		width: "50%",
+		date: "2024"
+	},
+	{
+		title: "LeaseWise",
+		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718311/cover_cxhrxn.png",
+		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718306/cover_vttsp6.gif",
+		heading: "Streamline your real estate management: Track finances, explore nationwide housing listings and rental market rates, and connect seamlessly with a built-in messaging client.",
+		description: "While working in real estate, I recognized the need for a more efficient system to manage payments and facilitate tenant-owner communication.\n\nLeaseWise simplifies property management by allowing you to track profits and losses, monitor recent and upcoming payments, and access real-time nationwide listings and rental rates.",
+		captions: [
+			"Supports distinct user roles for tenants and managers, with secure authentication via JSON Web Tokens embedded in signed HTTP cookies.",
+			"Comprehensive MLS listing search and fair market rental rates powered by APIs from HUD.gov and Realty-in-US.",
+			"Secure data storage and retrieval powered by MongoDB, Mongoose, and ExpressJS."
+		],
+		images : [
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718305/lw-gallery_dmawbj.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718302/lw-dashboard_jut8en.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718303/lw-messages_ihyejo.png",
+			"https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718308/mobile-finances_hi1bkj.png"
+		],
+		link: 'https://lease-wise.com',
+		github: 'https://github.com/sujithvarughese/leasewise-api',
+		appStore: '',
+		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Mantine UI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
 		width: "50%"
@@ -121,7 +122,8 @@ export const projects = [
 		tech: ["JavaScript", "OpenAI", "NodeJS", "React", "MongoDB", "ChakraUI", "HTML", "CSS"],
 		featured: true,
 		isMobile: false,
-		width: "20%"
+		width: "20%",
+		date: "2023"
 	},
 	{
 		title: "Trivia Night AI",
@@ -168,7 +170,8 @@ export const projects = [
 		tech: ["JavaScript", "React", "ChakraUI", "HTML", "CSS"],
 		featured: false,
 		isMobile: false,
-		width: "40%"
+		width: "40%",
+		date: "2022"
 	},
 	{
 		title: "BookStax (Mobile App)",
@@ -192,7 +195,8 @@ export const projects = [
 		tech: ["JavaScript", "OpenAI", "React Native", "Expo", "NodeJS", "Firebase", "HTML", "CSS"],
 		featured: false,
 		isMobile: true,
-		width: "20%"
+		width: "20%",
+		date: ""
 	},
 	{
 		title: "On the Books",
@@ -217,7 +221,8 @@ export const projects = [
 		tech: ["JavaScript", "NodeJS", "React", "MongoDB", "Styled Components", "HTML", "CSS"],
 		featured: false,
 		isMobile: false,
-		width: "20%"
+		width: "20%",
+		date: "2021"
 	},
 
 ]
