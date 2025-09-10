@@ -43,7 +43,7 @@ const Hero = ({ form, handleSubmit }) => {
 
 
   return (
-    <LampContainer className="md:flex items-center justify-center gap-10 py-64 sm:p-0">
+    <LampContainer className="md:flex items-center justify-center gap-10 pt-64 sm:p-0">
       <Flex direction={{ base: "column", sm: "row" }} justify="center" align="center" className="">
         <Flex direction="column" justify="center" align="center" className="w-full">
           <motion.h1

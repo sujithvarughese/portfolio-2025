@@ -14,7 +14,7 @@ import {FaAppStore} from "react-icons/fa";
 interface TimelineEntry {
   date: string;
   title: string;
-  description?: string;
+  heading?: string;
   images?: string[];
   appStore?: string;
   link?: string;
@@ -50,12 +50,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
       direction="column"
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto py-12 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-          Projects throughout my journey.
+          Projects
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          A showcase of the web and mobile applications I’ve designed, built, and deployed over the past five years, highlighting growth, creativity, and technical skill.
+          A showcase of the web and mobile applications I’ve designed, built, and deployed throughout my journey in software development.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 {item?.tech?.map((item, index) => <Tooltip label={item} key={index} ><Avatar size={40} variant="transparent">{logos[item]}</Avatar></Tooltip>)}
               </Flex>
               <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
-                {item.description}
+                {item.heading}
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {item.images?.map(image =>

@@ -10,9 +10,9 @@ import cvIcon from '../assets/images/icons/cv.png'
 
 const Footer = () => {
   return (
-    <Flex direction="column" align="center" py={42} gap={8} bg="white">
+    <Flex direction="column" align="center" py={42} gap={8} bg="black">
       <Button component="a" href={`mailto:${emailAddress}`}>Let's Connect</Button>
-      <Text>Get in touch! Feedback and inquiries are all welcome.</Text>
+      <Text c="white">Get in touch! Feedback and inquiries are all welcome.</Text>
       <Flex className="social-icon" gap={6}>
         <Tooltip label="Resumé">
           <ActionIcon component="a" href={resume} target="_blank" rel="noreferrer"><Image src={cvIcon}  alt="cv" w="50%" /></ActionIcon>
