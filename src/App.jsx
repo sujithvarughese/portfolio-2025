@@ -13,6 +13,7 @@ import { useForm } from '@mantine/form';
 import {addMessageToChat, fetchAiStream} from "./features/assistantSlice.js";
 import {useDispatch} from "react-redux";
 import {Spotlight} from "./components/ui/spotlight-new";
+import {Navbar} from "./navigation/Navbar.js";
 
 const App = () => {
 
@@ -40,15 +41,17 @@ const App = () => {
 
 
   return (
-    <AppShell m="auto">
-      <Header open={open}/>
-
+    <AppShell m="auto" maw={1920}>
+      <Box display={{ base: "block", sm: "none" }} position="fixed">
+        <Header open={open}/>
+      </Box>
+      <Navbar open={open} />
       <AppShell.Main>
         <Flex direction="column" pos="relative">
-          <div className="w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-            <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
+          <div className="w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+            <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-center">
               <Spotlight />
-              <div className="px-4 py-10 md:py-20">
+              <div className="px-4">
                 <Hero form={form} handleSubmit={handleSubmit} />
                 <Projects />
 

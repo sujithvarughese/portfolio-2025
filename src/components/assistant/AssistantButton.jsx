@@ -25,13 +25,12 @@ const AssistantButton = ({ open }) => {
           type: "bounce",
         }}
     >
-      <Tooltip label="AI Assistant" >
-        <Indicator label="New" position="top-start" size={16} color="orange.7">
-          <ActionIcon style={{ border: "4px solid orange"}} variant="gradient" onClick={handleClick} size={42}>
+      <Tooltip label="AI Chatbot" >
+          <ActionIcon style={{ border: "4px solid orange", borderRadius: "50%"}} variant="gradient" onClick={handleClick} size={42}>
             <RiAiGenerate2 size={32} />
           </ActionIcon>
-          <Text size="xs" c="orange.7" style={{ textAlign: "center" }}>Assistant</Text>
-        </Indicator>
+
+
       </Tooltip>
     </Box>
   )
