@@ -41,30 +41,26 @@ const App = () => {
 
 
   return (
-    <AppShell m="auto" maw={1920}>
-      <Box display={{ base: "block", sm: "none" }} position="fixed">
-        <Header open={open}/>
-      </Box>
+    <Box m="auto" maw={1920}>
       <Navbar open={open} />
-      <AppShell.Main>
-        <Flex direction="column" pos="relative">
-          <div className="w-full flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-            <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-center">
-              <Spotlight />
-              <div className="px-4">
-                <Hero form={form} handleSubmit={handleSubmit} />
-                <Projects />
 
-              </div>
-            </div>
-          </div>
+      <main className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
 
-          <Footer />
-        </Flex>
-      </AppShell.Main>
+
+          <Spotlight />
+
+          <Hero form={form} handleSubmit={handleSubmit} />
+          <Projects />
+
+
+
+
+      </main>
+      <Footer />
+
 
       <Assistant opened={opened} close={close} form={form} handleSubmit={handleSubmit} />
-    </AppShell>
+    </Box>
   )
 }
 

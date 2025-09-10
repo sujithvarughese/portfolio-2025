@@ -1,5 +1,17 @@
 import React from 'react'
-import { ActionIcon, AppShellHeader, Burger, Flex, Group, HoverCard, Image, Text, Title, Tooltip, } from '@mantine/core'
+import {
+  ActionIcon,
+  AppShellHeader,
+  Box,
+  Burger,
+  Flex,
+  Group,
+  HoverCard,
+  Image,
+  Text,
+  Title,
+  Tooltip,
+} from '@mantine/core'
 import resume from "../assets/images/varughese_resume.pdf"
 const emailAddress = "sujith.varug@gmail.com"
 import linkedInIcon from '../assets/images/icons/linkedin-icon.svg';
@@ -13,7 +25,7 @@ import {motion} from "motion/react";
 const Header = ({ open }) => {
 
   return (
-    <AppShellHeader>
+    <Box>
       <Flex
         component={motion.div}
         initial={{ y: "-20%", opacity: 0 }}
@@ -54,7 +66,7 @@ const Header = ({ open }) => {
 
         <AssistantButton open={open}/>
       </Flex>
-    </AppShellHeader>
+    </Box>
   )
 }
 

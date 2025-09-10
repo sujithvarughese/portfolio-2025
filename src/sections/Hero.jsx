@@ -43,7 +43,7 @@ const Hero = ({ form, handleSubmit }) => {
 
 
   return (
-    <LampContainer className="md:flex items-center justify-center gap-10">
+    <LampContainer className="md:flex items-center justify-center gap-10 py-64 sm:p-0">
       <Flex direction={{ base: "column", sm: "row" }} justify="center" align="center" className="">
         <Flex direction="column" justify="center" align="center" className="w-full">
           <motion.h1
@@ -54,7 +54,7 @@ const Hero = ({ form, handleSubmit }) => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 sm:py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
           >
             Sujith Varughese
           </motion.h1>
@@ -69,7 +69,7 @@ const Hero = ({ form, handleSubmit }) => {
               duration: 0.3,
               delay: 0.8,
             }}
-            className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-white dark:text-neutral-400"
+            className="relative z-10 mx-auto max-w-xl text-center text-lg font-normal text-white dark:text-neutral-400"
           >
             {currentIntroductionText}
           </motion.p>
@@ -80,7 +80,7 @@ const Hero = ({ form, handleSubmit }) => {
                 opacity: 1, y: 0, x: 0,
                 transition: { delay: 2, type: "spring", damping: 350, mass: 0.2, stiffness: 250  }
               }}
-              className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-white dark:text-neutral-400"
+              className="relative z-10 mx-auto max-w-xl text-center text-lg font-normal text-white dark:text-neutral-400"
             >
               <IoLocationSharp fontSize={28} color="white"/>
             </motion.div>
@@ -99,8 +99,8 @@ const Hero = ({ form, handleSubmit }) => {
             }}
             className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <a href={`mailto:${emailAddress}`}  className="w-60 transform cursor-pointer rounded-lg text-center font-bold bg-green-500 px-6 py-3 text-white transition-all duration-300 hover:bg-green-800">
-              Email me
+            <a href={`mailto:${emailAddress}`}  className="w-60 transform cursor-pointer rounded-lg text-center font-bold bg-green-500 px-6 py-6 mt-6 sm:mt-0 text-white transition-all duration-300 hover:bg-green-800">
+              Contact me
             </a>
             <Flex justify="space-around" w="100%" display={{ base: "none", sm: "flex" }}>
               <Flex direction="column">
@@ -116,7 +116,7 @@ const Hero = ({ form, handleSubmit }) => {
                   <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
                   <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
                 </Flex>
-                <Button my={12} component="a" href={`mailto:${emailAddress}`}>Contact Me</Button>
+
               </Box>
             </Flex>
           </motion.div>
