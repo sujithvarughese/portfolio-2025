@@ -3,7 +3,7 @@ export const projects = [
 		title: "Authentime",
 		coverImage: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474246/20250528_1250_Authentime_AI_Watch_Verification_simple_compose_01jwbwt7tbf20t2r6q36r6f4wy_jr25mf.png",
 		coverGif: "https://res.cloudinary.com/dts8hi7rg/image/upload/v1748474256/Untitled_mhwgmo.gif",
-		heading: "With paid subscribers across the world, Authentime is a cutting-edge application that leverages artificial intelligence to analyze and authenticate luxury timepieces. Our sophisticated AI system examines various aspects of watches to help determine their authenticity.",
+		heading: "With hundreds of paid subscribers, Authentime is a cutting-edge application that leverages artificial intelligence to analyze and authenticate luxury timepieces. Our sophisticated AI system examines various aspects of watches to help determine their authenticity.",
 		description: "Authentime uses advanced AI technology to instantly verify the authenticity of luxury watches.\n\nSimply upload a photo, and our system analyzes key details like dial patterns, engravings, and serial placements to determine if your timepiece is genuine. Whether you're buying, selling, or collecting, Authentime gives you confidence in every tick.",
 		captions: [
 			"AI-Powered Watch Authentication – Instantly verify luxury watches through high-accuracy image analysis",

@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react"
 
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input.js";
 
@@ -20,12 +21,23 @@ export function HeroForm({ form, handleSubmit }) {
     console.log("submitted");
   };
   return (
-    <div className="flex flex-col justify-center items-center px-4 mt-4 w-full">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+        delay: 1,
+      }}
+      className="flex flex-col justify-center items-center px-4 mt-4 w-full">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
         onSubmit={onSubmit}
       />
-    </div>
+    </motion.div>
   );
 }
