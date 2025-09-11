@@ -8,6 +8,7 @@ import { heroImages } from "../data/data.js";
 import {IoIosSend} from "react-icons/io";
 import resume from "../assets/images/varughese_resume.pdf"
 import {LampContainer} from "../components/ui/lamp.js";
+import {HeroForm} from "../components/assistant/HeroForm.jsx";
 const emailAddress = "sujith.varug@gmail.com"
 
 const Hero = ({ form, handleSubmit }) => {
@@ -86,6 +87,7 @@ const Hero = ({ form, handleSubmit }) => {
             </motion.div>
             <motion.p style={{ color: "white"}}>{currentLocationText}</motion.p>
           </Flex>
+          <HeroForm form={form} handleSubmit={handleSubmit}/>
           <motion.div
             initial={{
               opacity: 0,
