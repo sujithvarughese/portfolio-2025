@@ -63,13 +63,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="grid grid-cols-[20%_80%] justify-start"
+            className=" grid grid-cols-[15%_70%] md:grid-cols-[25%_75%] justify-start"
           >
             <div className="flex sticky flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="hidden md:flex h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="text-xl md:pl-20 lg:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="text-md md:pl-20 lg:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
                 {item.date}
               </h3>
             </div>

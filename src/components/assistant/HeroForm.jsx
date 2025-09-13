@@ -32,7 +32,7 @@ export function HeroForm({ form, handleSubmit }) {
         duration: 0.3,
         delay: 1,
       }}
-      className="flex flex-col justify-center items-center px-4 mt-4 w-full">
+      className="flex flex-col justify-center items-center px-4 mt-4 md:w-full">
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
