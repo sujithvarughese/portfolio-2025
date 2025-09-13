@@ -63,13 +63,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:gap-10"
+            className="grid grid-cols-[20%_80%] justify-start"
           >
-            <div className="hidden md:flex sticky flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+            <div className="flex sticky flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+              <div className="hidden md:flex h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
-              <h3 className="text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
+              <h3 className="text-xl md:pl-20 lg:text-5xl font-bold text-neutral-500 dark:text-neutral-500 ">
                 {item.date}
               </h3>
             </div>
@@ -95,12 +95,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   />
                 )}
               </div>
-              <Flex gap={12} justify="center" wrap="wrap" pt={12}>
+              <Flex gap={12} justify="center" wrap="wrap" py={16}>
                 {item.appStore &&
                   <Button
                     component="a"
                     href={item.appStore}
-                    variant="light" size="lg"
+                    variant="light" size="md"
                     target="_blank"
                     leftSection={<FaAppStore size={24}/>}
                   >App Store
@@ -109,16 +109,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 {item.link &&
                   <>
                     {item.isMobile ?
-                      <Button variant="light" size="lg" onClick={item.openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button>
+                      <Button variant="light" size="md" onClick={item.openMobileAlert} leftSection={<LiaRocketSolid size={24}/>}>Demo</Button>
                       :
-                      <Button component="a" variant="light" size="lg" href={item.link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>
+                      <Button component="a" variant="light" size="md" href={item.link} target="_blank" rel="noreferrer" leftSection={<LiaRocketSolid size={24} /> }>Demo</Button>
                     }
                   </>
                 }
                 <Button
                   component="a"
                   variant="light"
-                  size="lg"
+                  size="md"
                   href={item.github}
                   target="_blank"
                   rel="noreferrer"

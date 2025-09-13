@@ -41,10 +41,10 @@ const App = () => {
 
 
   return (
-    <Box m="auto" maw={1920}>
+    <Box m="auto">
       <Navbar open={open} />
 
-      <main className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <main className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-y-scroll">
 
 
           <Spotlight />
