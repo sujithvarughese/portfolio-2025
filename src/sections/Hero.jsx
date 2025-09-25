@@ -112,14 +112,13 @@ const Hero = ({ form, handleSubmit }) => {
                 <Anchor href="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718364/accounting_certificate_ff7vvg.png" target="_blank" rel="noreferrer">Accounting Technology</Anchor>
                 <Anchor href="https://res.cloudinary.com/dts8hi7rg/image/upload/v1747718364/business_management_cert_kmza3i.png" target="_blank" rel="noreferrer">Business Management</Anchor>
               </Flex>
-              <Box>
+              {/*<Box>
                 <Flex direction="column">
                   <Anchor href={resume} target="_blank" rel="noreferrer">Resumé</Anchor>
                   <Anchor href="https://www.linkedin.com/in/sujithvarughese/" target="_blank" rel="noreferrer">LinkedIn</Anchor>
                   <Anchor href="http://github.com/sujithvarughese" target="_blank" rel="noreferrer">GitHub</Anchor>
                 </Flex>
-
-              </Box>
+              </Box>*/}
             </Flex>
           </motion.div>
         </Flex>

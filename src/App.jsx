@@ -49,7 +49,7 @@ const App = () => {
           <Hero form={form} handleSubmit={handleSubmit} />
         {/*<Projects />*/}
       </main>
-      <Footer />
+      {/*<Footer />*/}
 
 
       <Assistant opened={opened} close={close} form={form} handleSubmit={handleSubmit} />
