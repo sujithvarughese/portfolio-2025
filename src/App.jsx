@@ -47,7 +47,7 @@ const App = () => {
       <main className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative m-auto">
           <Spotlight />
           <Hero form={form} handleSubmit={handleSubmit} />
-          <Projects />
+        {/*<Projects />*/}
       </main>
       <Footer />
 
