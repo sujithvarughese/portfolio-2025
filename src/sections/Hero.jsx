@@ -44,7 +44,7 @@ const Hero = ({ form, handleSubmit }) => {
 
 
   return (
-    <LampContainer className="md:flex items-center justify-center gap-10 pt-64 sm:p-0">
+    <LampContainer className="md:flex items-center justify-center gap-10 pt-84 md:p-0 h-screen">
       <Flex direction={{ base: "column", sm: "row" }} justify="center" align="center" className="">
         <Flex direction="column" justify="center" align="center" className="w-full">
           <motion.h1
@@ -55,7 +55,7 @@ const Hero = ({ form, handleSubmit }) => {
               duration: 0.8,
               ease: "easeInOut",
             }}
-            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 sm:py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+            className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 md:py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
           >
             Sujith Varughese
           </motion.h1>
@@ -74,7 +74,7 @@ const Hero = ({ form, handleSubmit }) => {
           >
             {currentIntroductionText}
           </motion.p>
-          <Flex justify="center" align="center">
+          <Flex justify="center" align="center" mb={12}>
             <motion.div
               initial={{ opacity: 0, y: -1000 }}
               animate={{
@@ -101,7 +101,7 @@ const Hero = ({ form, handleSubmit }) => {
             }}
             className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
           >
-            <a href={`mailto:${emailAddress}`}  className="w-60 transform cursor-pointer rounded-lg text-center font-bold bg-green-500 px-6 py-6 mt-6 sm:mt-0 text-white transition-all duration-300 hover:bg-green-800">
+            <a href={`mailto:${emailAddress}`}  className="w-50 transform cursor-pointer rounded-lg text-center font-bold bg-green-500 px-6 py-4 mt-6 sm:mt-0 text-white transition-all duration-300 hover:bg-green-800">
               Contact me
             </a>
             <Flex justify="space-around" w="100%" display={{ base: "none", sm: "flex" }}>

@@ -42,11 +42,11 @@ const App = () => {
 
   return (
     <Box m="auto">
-      <Navbar open={open} />
+      {/*<Navbar open={open} />*/}
 
       <main className="w-full items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative m-auto">
-          <Spotlight />
-          <Hero form={form} handleSubmit={handleSubmit} />
+        {/*<Spotlight />*/}
+        <Hero form={form} handleSubmit={handleSubmit} />
         {/*<Projects />*/}
       </main>
       {/*<Footer />*/}
